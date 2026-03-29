@@ -13,7 +13,7 @@ import {
 } from "@phosphor-icons/react";
 import { assets } from "./assets";
 import { Button } from "./components/ui/button";
-import CountUp from "react-countup";
+import { Counter } from "./components/ui/counter/counter";
 
 export function App() {
   const service = [
@@ -270,12 +270,8 @@ export function App() {
             <div className="flex flex-col items-center gap-1 p-6" key={item.id}>
               <div className="p-0.5">{item.logo}</div>
               <h2 className="poppins-bold text-[32px]  w-20 text-[#0088EB] text-center">
-                <CountUp.default
+                <Counter
                   end={item.number}
-                  duration={5}
-                  enableScrollSpy
-                  scrollSpyDelay={200}
-                  separator="."
                 />
                 {item.symbol}
               </h2>
