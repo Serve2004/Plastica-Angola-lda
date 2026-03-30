@@ -1,207 +1,16 @@
-// import { Header } from "./components/header";
-
-import {
-  CaretRightIcon,
-  CheckCircleIcon,
-  ChefHatIcon,
-  GearIcon,
-  LeafIcon,
-  RecycleIcon,
-  TreeEvergreenIcon,
-  TrendUpIcon,
-  UsersIcon,
-} from "@phosphor-icons/react";
+import { CaretRightIcon, CheckCircleIcon } from "@phosphor-icons/react";
 import { assets } from "./assets";
 import { Button } from "./components/ui/button";
 import { Counter } from "./components/ui/counter/counter";
+import { about, products, service, statics, sustainability } from "./data/data";
+import { Header } from "./components/header";
 
 export function App() {
-  const service = [
-    {
-      id: 1,
-      logo: <ChefHatIcon size={32} color="#0088EB" />,
-      name: "Utensílios de cozinha",
-      description:
-        "Produtos funcionais e duraveis para o dia a dia da sua cozinha.",
-    },
-    {
-      id: 2,
-      logo: <img src={assets.box} alt="box" className="w-8 h-8" />,
-      name: "Embalagens Plasticas",
-      description:
-        "Soluções seguras e eficientes para acondicionamento e transporte.",
-    },
-    {
-      id: 3,
-      logo: <img src={assets.eco} alt="box" className="w-8 h-8" />,
-      name: "Soluções Industriais",
-      description:
-        "Peças de componentes para os mais diversos setores indutriais.",
-    },
-    {
-      id: 4,
-      logo: <GearIcon size={32} color="#0088EB" />,
-      name: "Produção Personalizada",
-      description:
-        "Desenvolvemos produtos sob medida para as suas necessdades.",
-    },
-  ];
-  const statics = [
-    {
-      id: 1,
-      logo: <img src={assets.medal} alt="clients" className="w-11.5 h-11.5" />,
-      number: 100,
-      symbol: "%",
-      description: "Qualidade",
-    },
-    {
-      id: 2,
-      logo: <UsersIcon size={46} weight="fill" color="#0088EB" />,
-      number: 500,
-      symbol: "+",
-      description: "clientes",
-    },
-    {
-      id: 3,
-      logo: <TrendUpIcon size={46} color="#0088EB" />,
-      number: 1200,
-      symbol: "+",
-      description: "Projetos",
-    },
-  ];
-  const products = [
-    {
-      id: 1,
-      logo: <ChefHatIcon size={50} color="#0088EB" />,
-      name: "Utensílios de cozinha",
-      products: ["Tigelas", "Tabuleiros", "Escorredores", "Recipientes"],
-    },
-    {
-      id: 2,
-      logo: <img src={assets.box} alt="box" className="w-12.5 h-12.5" />,
-      name: "Embalagens",
-      products: [
-        "Caixa alimentares",
-        "Sacos plásticos",
-        "Filmes stretch",
-        "Embalagens personalizadas",
-      ],
-    },
-    {
-      id: 3,
-      logo: <img src={assets.cubos} alt="box" className="w-12.5 h-12.5" />,
-      name: "Brinquedos",
-      products: [
-        "Brinquedos educativos",
-        "Jogos de encaixe",
-        "Bonecos e figuras",
-        "Brinquedos de praia",
-      ],
-    },
-    {
-      id: 4,
-      logo: <img src={assets.eco} alt="box" className="w-12.5 h-12.5" />,
-      name: "Soluções Industriais",
-      products: [
-        "Tubos e conexões",
-        "Paletes",
-        "Contentores",
-        "Peças Técnicas",
-      ],
-    },
-    {
-      id: 5,
-      logo: <img src={assets.chave} alt="box" className="w-12.5 h-12.5" />,
-      name: "Produção Personalizada",
-      products: [
-        "Caixa alimentares",
-        "Sacos plásticos",
-        "Filmes stretch",
-        "Embalagens personalizadas",
-      ],
-    },
-  ];
-  const about = [
-    {
-      id: 1,
-      name: "Produtos de alta qualidade",
-      description:
-        "Materiais selecionados e processos controlados para garantir excelência.",
-    },
-    {
-      id: 2,
-      name: "Atendimento personalizado",
-      description:
-        "Cada cliente recebe atenção exclusiva para soluções à medida.",
-    },
-    {
-      id: 3,
-      name: "Entregas rápidas e seguras",
-      description: "Logísticas eficiente para cumprir prazos com seguraça.",
-    },
-    {
-      id: 4,
-      name: "Equipa experiente e dedicada",
-      description:
-        "Profissionais qualificados com anos de experiência no setor.",
-    },
-  ];
-  const sustainability = [
-    {
-      id: 1,
-      logo: <RecycleIcon size={32} color="#1BC69A" />,
-      name: "Reciclagem",
-    },
-    {
-      id: 2,
-      logo: <LeafIcon size={32} color="#1BC69A" />,
-      name: "Eco-friendly",
-    },
-    {
-      id: 3,
-      logo: <TreeEvergreenIcon size={32} color="#1BC69A" />,
-      name: "Futuro Verde",
-    },
-  ];
   return (
     <div>
-      <section className="px-33.5 py-10 bg-[#D9D9D9] h-dvh" id="home">
-        <header className="flex items-center justify-between">
-          <h1 className="text-4xl poppins-extrabold tracking-tight bg-linear-to-r from-[#1BC69A] to-[#FF6400] bg-clip-text text-transparent">
-            Plastica <span className="text-[13px]">Angola LDA</span>
-          </h1>
-          <nav>
-            <ul className="nav-list flex gap-4">
-              <li>
-                <a href="#home">início</a>
-              </li>
-              <li>
-                <a href="#about">Sobre</a>
-              </li>
-              <li>
-                <a href="#service">Serviços</a>
-              </li>
-              <li>
-                <a href="#products">Produtos</a>
-              </li>
-              <li>
-                <a href="#sustainability">Sustentabilidade</a>
-              </li>
-              <li>
-                <a href="#contact">Contato</a>
-              </li>
-            </ul>
-          </nav>
-          <Button className="p-4.5 rounded-[35px] bg-[#FF6400] text-lg">
-            <img
-              src={assets.social}
-              alt="Social Media"
-              className="w-7.5 h-7.5"
-            />{" "}
-            Fale conosco
-          </Button>
-        </header>
-        <div className="flex flex-col items-center justify-center gap-6 mt-27 h-100">
+      <Header />
+      <section className="px-33.5 py-10 bg-[#D9D9D9] h-dvh hero" id="home">
+        <div className="flex flex-col items-center justify-center gap-6 mt-30 h-100 text-white">
           <h1 className="poppins-bold text-5xl text-center leading-tight">
             Soluções em plástico que se adaptam à sua realidade
           </h1>
@@ -215,11 +24,16 @@ export function App() {
           </Button>
         </div>
       </section>
+      <div
+        className="pointer-events-none absolute left-0 right-0 top-[50vh] h-[80vh] 
+    bg-linear-to-b from-transparent via-blue-600 to-white z-10 "
+      />
+
       <section
-        className="px-33.5 py-10 h-dvh flex flex-col items-center justify-center "
+        className="px-33.5 py-10 h-dvh flex flex-col items-center justify-center relative z-20 mt-10"
         id="service"
       >
-        <h1 className="poppins-bold text-5xl text-center text-[#343434]">
+        <h1 className="poppins-bold text-5xl text-center text-[#343434] ">
           Os Nossos Serviços
         </h1>
         <p className="poppins-medium text-2xl w-184.75 text-center text-[#777777]">
@@ -248,8 +62,9 @@ export function App() {
           ))}
         </div>
       </section>
+
       <section
-        className="px-33.5 py-10 h-dvh flex flex-col items-start justify-center "
+        className="px-33.5 py-10 h-dvh flex flex-col items-start justify-center mt-10"
         id="about"
       >
         <h1 className="poppins-bold text-5xl text-center text-[#343434]">
@@ -270,9 +85,7 @@ export function App() {
             <div className="flex flex-col items-center gap-1 p-6" key={item.id}>
               <div className="p-0.5">{item.logo}</div>
               <h2 className="poppins-bold text-[32px]  w-20 text-[#0088EB] text-center">
-                <Counter
-                  end={item.number}
-                />
+                <Counter end={item.number} />
                 {item.symbol}
               </h2>
               <p className="poppins-medium text-[13px] text-center">
@@ -282,8 +95,9 @@ export function App() {
           ))}
         </div>
       </section>
+
       <section
-        className="px-33.5 py-10 h-dvh flex flex-col items-center justify-center "
+        className="px-33.5 py-10 h-dvh flex flex-col items-center justify-center mt-10"
         id="products"
       >
         <h1 className="poppins-bold text-5xl text-center text-[#343434]">
@@ -326,8 +140,9 @@ export function App() {
           ))}
         </div>
       </section>
+
       <section
-        className="px-33.5 py-10 h-dvh flex flex-col items-center justify-center "
+        className="px-33.5 py-10 h-dvh flex flex-col items-center justify-center mt-10"
         id="f"
       >
         <h1 className="poppins-bold text-5xl text-center text-[#343434]">
@@ -361,8 +176,9 @@ export function App() {
           ))}
         </div>
       </section>
+
       <section
-        className="px-33.5 py-10 h-dvh flex flex-col items-center justify-center "
+        className="px-33.5 py-10 h-dvh flex flex-col items-center justify-center mt-10"
         id="sustainability"
       >
         <h1 className="poppins-bold text-5xl text-center text-[#343434]">
@@ -388,8 +204,9 @@ export function App() {
           ))}
         </div>
       </section>
+
       <section
-        className="px-33.5 py-10 h-full flex flex-col items-center justify-center "
+        className="px-33.5 py-10 h-full flex flex-col items-center justify-center hero2 mt-10"
         id="contact"
       >
         <h1 className="poppins-bold text-5xl text-center text-[#343434]">
@@ -404,19 +221,8 @@ export function App() {
           Fale conosco
         </Button>
       </section>
-      <div className="flex  gap-4 bg-[#343434] h-80 w-full mt-10">
-        <h1 className="text-4xl poppins-extrabold tracking-tight bg-linear-to-r from-[#1BC69A] to-[#FF6400] bg-clip-text text-transparent">
-          Plastica <span className="text-[13px]">Angola LDA</span>
-        </h1>
-
-        <div className="flex flex-col items-center justify-end gap-2 flex-1">
-          <p className="poppins-medium text-sm text-[#D9D9D9]">
-            © 2024 Plástica Angola. Todos os direitos reservados.
-          </p>
-          <p className="poppins-medium text-sm text-[#D9D9D9]">
-            Desenvolvido por Seve.io
-          </p>
-        </div>
+      <div className="flex px-33.5 py-10  gap-4 bg-[#343434] h-80 w-full ">
+        
       </div>
     </div>
   );

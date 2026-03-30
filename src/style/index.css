@@ -174,6 +174,25 @@
   -ms-overflow-style: none;
 }
 
+.hero {
+  height: 100vh;
+
+  background: url("../assets/back.svg") no-repeat center;
+
+  background-size: cover;
+  background-position: center;
+  background-position-x: center
+}
+
+.hero2 {
+  height: 100vh;
+
+  background: url("../assets/tolk.svg") no-repeat center;
+  background-size: cover;
+  background-position: center;
+  background-position-x: center
+}
+
 
 @layer base {
   * {

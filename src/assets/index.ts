@@ -1,14 +1,33 @@
-import chave from "./chave.png";
-import cubos from "./cubos-baby-abc.png";
-import eco from "./eco-factory.png"
-import medal from "./medal.png"
-import social from "./social-media.png"
-import box from "./box.png"
+import chave from "./chave.svg";
+import cubos from "./cubos-baby-abc.svg";
+import eco from "./eco-factory.svg"
+import medal from "./medal.svg"
+import social from "./social-media.svg"
+import box from "./box.svg"
+import back from "./back.svg"
+import logo from "./logo.svg"
+import talk from "./tolk.svg"
+import footer from "./footer.svg"
+import about from "./about.svg"
+import material from "./material.svg"
+import toy from "./toy.svg"
+import tubos from "./tubos.svg"
+import utencilios from "./utencilios.svg"
+
 export const assets = {
   chave,
   cubos,
   eco,
   medal,
   social,
-  box
+  box,
+  back,
+  logo,
+  talk,
+  footer,
+  about,
+  material,
+  toy,
+  tubos,
+  utencilios
 };
