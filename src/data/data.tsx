@@ -1,5 +1,20 @@
 import { assets } from "@/assets";
-import { ChefHatIcon, GearIcon, LeafIcon, RecycleIcon, TreeEvergreenIcon, TrendUpIcon, UsersIcon } from "@phosphor-icons/react";
+import {
+  ChefHatIcon,
+  EnvelopeIcon,
+  FacebookLogoIcon,
+  GearIcon,
+  InstagramLogoIcon,
+  LeafIcon,
+  LinkedinLogoIcon,
+  MapPinIcon,
+  PhoneIcon,
+  RecycleIcon,
+  TreeEvergreenIcon,
+  TrendUpIcon,
+  UsersIcon,
+  WhatsappLogoIcon,
+} from "@phosphor-icons/react";
 
 export const service = [
   {
@@ -30,6 +45,7 @@ export const service = [
     description: "Desenvolvemos produtos sob medida para as suas necessdades.",
   },
 ];
+
 export const statics = [
   {
     id: 1,
@@ -53,17 +69,20 @@ export const statics = [
     description: "Projetos",
   },
 ];
+
 export const products = [
   {
     id: 1,
     logo: <ChefHatIcon size={50} color="#0088EB" />,
     name: "Utensílios de cozinha",
+    image: assets.utencilios,
     products: ["Tigelas", "Tabuleiros", "Escorredores", "Recipientes"],
   },
   {
     id: 2,
     logo: <img src={assets.box} alt="box" className="w-12.5 h-12.5" />,
     name: "Embalagens",
+    image: assets.embalagem,
     products: [
       "Caixa alimentares",
       "Sacos plásticos",
@@ -75,6 +94,7 @@ export const products = [
     id: 3,
     logo: <img src={assets.cubos} alt="box" className="w-12.5 h-12.5" />,
     name: "Brinquedos",
+    image: assets.toy,
     products: [
       "Brinquedos educativos",
       "Jogos de encaixe",
@@ -86,20 +106,23 @@ export const products = [
     id: 4,
     logo: <img src={assets.eco} alt="box" className="w-12.5 h-12.5" />,
     name: "Soluções Industriais",
+    image: assets.tubos,
     products: ["Tubos e conexões", "Paletes", "Contentores", "Peças Técnicas"],
   },
   {
     id: 5,
     logo: <img src={assets.chave} alt="box" className="w-12.5 h-12.5" />,
     name: "Produção Personalizada",
+    image: assets.material,
     products: [
-      "Caixa alimentares",
-      "Sacos plásticos",
-      "Filmes stretch",
-      "Embalagens personalizadas",
+      "Modelos exclusivos",
+      "Protótipos",
+      "Peças sob medida",
+      "Projetos especiais",
     ],
   },
 ];
+
 export const about = [
   {
     id: 1,
@@ -124,6 +147,7 @@ export const about = [
     description: "Profissionais qualificados com anos de experiência no setor.",
   },
 ];
+
 export const sustainability = [
   {
     id: 1,
@@ -139,5 +163,47 @@ export const sustainability = [
     id: 3,
     logo: <TreeEvergreenIcon size={32} color="#1BC69A" />,
     name: "Futuro Verde",
+  },
+];
+
+export const contact = [
+  {
+    id: 1,
+    logo: <PhoneIcon size={32} color="#25D366" />,
+    name: "+244 999 999 999",
+  },
+  {
+    id: 2,
+    logo: <EnvelopeIcon size={32} color="#25D366" />,
+    name: "plastangola@gmail.com",
+  },
+  {
+    id: 3,
+    logo: <MapPinIcon size={32} color="#25D366" />,
+    name: "Luanda, Angola",
+  },
+  {
+    id: 4,
+    logo: <WhatsappLogoIcon size={32} color="#25D366" />,
+    name: "WhatsApp",
+    fill: true,
+  },
+];
+
+export const media = [
+  {
+    id: 1,
+    logo: <FacebookLogoIcon size={32} />,
+    link: "https://www.facebook.com",
+  },
+  {
+    id: 2,
+    logo: <InstagramLogoIcon size={32} />,
+    link: "https://www.instagram.com",
+  },
+  {
+    id: 3,
+    logo: <LinkedinLogoIcon size={32} />,
+    link: "https://www.linkedin.com",
   },
 ];
