@@ -22,6 +22,11 @@ import carousel5 from "./carousel5.svg"
 import carousel6 from "./carousel6.svg"
 import carousel7 from "./carousel7.svg"
 import carousel8 from "./carousel8.svg"
+import slide1 from "./IMG1.svg"
+import slide2 from "./IMG2.svg"
+import slide3 from "./IMG3.svg"
+import slide4 from "./IMG4.svg"
+import slide5 from "./IMG5.svg"
 
 
 export const assets = {
@@ -49,4 +54,9 @@ export const assets = {
   carousel6,
   carousel7,
   carousel8,
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
 };

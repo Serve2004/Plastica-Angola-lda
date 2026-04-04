@@ -1,14 +1,9 @@
 import { assets } from "@/assets";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
+import { links } from "@/data/data";
 
-const links = [
-  { id: "home", label: "Início" },
-  { id: "about", label: "Sobre Nós" },
-  { id: "products", label: "Produtos" },
-  { id: "partners", label: "Parceiros" },
-  { id: "contact", label: "Contatos" },
-];
+
 
 export function Header() {
   const [active, setActive] = useState("home");
@@ -52,22 +47,22 @@ export function Header() {
   }, []);
   return (
     <header
-      className={`fixed top-0 left-0 right-0 px-13.75 py-10 flex items-center justify-between z-50 overflow-hidden h-16 border border-red-500 transition-all duration-1000 ${bgWhite ? "bg-white" : "bg-transparent"}`}
+      className={`fixed top-0 left-0 right-0 px-13.75 py-10 flex items-center justify-between z-50 overflow-hidden h-16 transition-all duration-1000 ${bgWhite ? "bg-white" : "bg-transparent"}`}
     >
-      <h1 className=" flex items-center justify-center border border-red-500">
+      <h1 className=" flex items-center justify-center">
         <img src={assets.logo} alt="Logo" />
       </h1>
 
       <nav>
         <ul
-          className={`nav-list flex gap-4 transition-all duration-500 ${bgWhite ? "text-black" : "text-white"}`}
+          className={`nav-list flex gap-4 transition-all duration-1000 ${bgWhite ? "text-black" : "text-white"}`}
         >
           {links.map((id) => (
             <li key={id.id}>
               <a
                 key={id.id}
                 href={`#${id.id}`}
-                className={`transition focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
+                className={`transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
           ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400]  font-bold" : bgWhite ? "text-black" : "text-white"}
           `}
               >

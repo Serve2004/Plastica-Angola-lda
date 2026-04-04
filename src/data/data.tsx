@@ -36,6 +36,14 @@ export const statics = [
   },
 ];
 
+export const slides = [
+  { image: assets.slide1, name: "Slide 1" },
+  { image: assets.slide2, name: "Slide 2" },
+  { image: assets.slide3, name: "Slide 3" },
+  { image: assets.slide4, name: "Slide 4" },
+  { image: assets.slide5, name: "Slide 5" },
+];
+
 export const products = [
   {
     id: 1,
@@ -100,27 +108,47 @@ export const carouselImages = [
   { image: assets.carousel8, name: "Carousel 8" },
 ];
 
+export const links = [
+  { id: "home", label: "Início" },
+  { id: "about", label: "Sobre Nós" },
+  { id: "products", label: "Produtos" },
+  { id: "partners", label: "Parceiros" },
+  { id: "contact", label: "Contatos" },
+];
+
 export const contact = [
   {
     id: 1,
-    logo: <PhoneIcon size={32} color="#25D366" />,
-    name: "+244 999 999 999",
+    logo: <WhatsappLogoIcon size={32} />,
+    color: "#25D366",
+    name: "WhatsApp",
+    label: "Fale conosco via WhatsApp",
+    description: "+244 923 456 789",
+    fill: true,
   },
   {
     id: 2,
-    logo: <EnvelopeIcon size={32} color="#25D366" />,
-    name: "plastangola@gmail.com",
+    logo: <EnvelopeIcon size={32} />,
+    color: "#0088EB",
+    name: "E-mail",
+    label: "Envie-nos e-mail",
+    description: "plastangola@gmail.com",
   },
   {
     id: 3,
-    logo: <MapPinIcon size={32} color="#25D366" />,
-    name: "Luanda, Angola",
+    logo: <PhoneIcon size={32} />,
+    color: "#8A38F5",
+    name: "Telefone",
+    label: "Ligue para nós",
+    description: "+244 999 999 999",
   },
   {
     id: 4,
-    logo: <WhatsappLogoIcon size={32} color="#25D366" />,
-    name: "WhatsApp",
-    fill: true,
+    logo: <MapPinIcon size={32} />,
+    color: "#EF3E3E",
+    name: "Localização",
+    label: "Visite-nos",
+    description: "Luanda, Angola",
   },
 ];
 
