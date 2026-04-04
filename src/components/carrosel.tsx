@@ -1,8 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode } from "swiper/modules";
+import { Autoplay, FreeMode, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/free-mode";
+import "swiper/css/effect-fade";
+
 
 import { carouselImages, slides } from "@/data/data";
 
@@ -41,11 +43,6 @@ export function Carousel() {
     </div>
   );
 }
-
-import { EffectFade } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/effect-fade";
 
 export default function HeroCarousel({
   children,
