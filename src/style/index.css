@@ -193,6 +193,16 @@
   background-position-x: center
 }
 
+.sombra{
+    height: 100vh;
+
+    background: url("../assets/SOMBRA.svg") no-repeat center;
+
+    background-size: cover;
+    background-position: center;
+    background-position-x: center
+  }
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
