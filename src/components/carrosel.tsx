@@ -7,7 +7,10 @@ import "swiper/css/free-mode";
 import "swiper/css/effect-fade";
 
 import { carouselImages, slides } from "@/data/data";
-import { ArrowCircleLeftIcon, ArrowCircleRightIcon } from "@phosphor-icons/react";
+import {
+  ArrowCircleLeftIcon,
+  ArrowCircleRightIcon,
+} from "@phosphor-icons/react";
 
 // =======================
 // 🔹 Carousel horizontal
@@ -44,7 +47,7 @@ export function Carousel() {
             <img
               src={product.image}
               alt={product.name}
-              className="object-cover rounded-[25px]"
+              className="object-cover rounded-[16px] md:rounded-[25px] sm:rounded-[1px]"
             />
           </SwiperSlide>
         ))}

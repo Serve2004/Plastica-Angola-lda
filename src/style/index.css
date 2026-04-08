@@ -162,18 +162,19 @@
   font-style: normal;
 }
 
-/* Chrome, Edge, Safari
-::-webkit-scrollbar {
-  display: none;
-}
+@media (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
- {
-  scrollbar-width: none;
-}
+  * {
+    scrollbar-width: none;
+  }
 
- {
-  -ms-overflow-style: none;
-} */
+  * {
+    -ms-overflow-style: none;
+  }
+}
 
 .hero {
   height: 100vh;
@@ -189,19 +190,17 @@
 
   background: url("../assets/t.svg") no-repeat center;
   background-size: cover;
+}
+
+.sombra {
+  height: 100vh;
+
+  background: url("../assets/SOMBRA.svg") no-repeat center;
+
+  background-size: cover;
   background-position: center;
   background-position-x: center
 }
-
-.sombra{
-    height: 100vh;
-
-    background: url("../assets/SOMBRA.svg") no-repeat center;
-
-    background-size: cover;
-    background-position: center;
-    background-position-x: center
-  }
 
 @layer base {
   * {
