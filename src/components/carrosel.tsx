@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/effect-fade";
 
-import { carouselImages, slides } from "@/data/data";
+import { carouselImages, slides, slidesMobile, slidesTablet } from "@/data/data";
 import {
   ArrowCircleLeftIcon,
   ArrowCircleRightIcon,
@@ -108,7 +108,14 @@ export default function HeroCarousel({
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         className="h-full"
       >
-        {slides.map((slide, index) => (
+        {(typeof window !== "undefined"
+          ? window.innerWidth < 768
+            ? slidesMobile
+            : window.innerWidth < 1024
+            ? slidesTablet
+            : slides
+          : slides
+        ).map((slide, index) => (
           <SwiperSlide key={index}>
             <div
               className="w-full h-full bg-cover bg-center"
@@ -119,7 +126,7 @@ export default function HeroCarousel({
       </Swiper>
 
       {/* Botões */}
-      <div className="absolute bottom-4 right-10 flex gap-6 z-50">
+      <div className="absolute bottom-4 right-1 md:right-10 flex gap-6 z-50">
         <button
           onClick={handlePrev}
           className="rounded-full cursor-pointer"

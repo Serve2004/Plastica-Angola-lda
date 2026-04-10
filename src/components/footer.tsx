@@ -54,9 +54,9 @@ export function Footer() {
               .map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-2 text-[13px] sm:text-[15px]"
+                  className="flex items-center text-[13px] sm:text-[15px]"
                 >
-                  <span className="text-[#FF6400] text-xs sm:text-sm">
+                  <span className="flex items-center gap-2 text-[#FF6400] w-8 sm:w-9 h-8 sm:h-9 rounded-full  p-1.5 sm:p-2">
                     {item.logo}
                   </span>
                   <p
@@ -74,7 +74,8 @@ export function Footer() {
       <div className="flex flex-col md:flex-row md:justify-between items-center w-full md:items-start gap-3 sm:gap-4">
         <div className="flex flex-col">
           <p className="text-[#E9E2E2E5] text-xs sm:text-sm">
-            © 2025 Plástica Angola. Todos os direitos reservados.
+            © {new Date().getFullYear()} Plástica Angola. Todos os direitos
+            reservados.
           </p>
           <p className="text-[#E9E2E2E5] text-xs sm:text-sm">
             Desenvolvido por Serve.io
