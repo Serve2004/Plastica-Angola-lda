@@ -10,25 +10,37 @@ export function Header() {
   const [bgWhite, setBgWhite] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const handleScroll = useScroll();
+  
+  const getLinkClassName = (id: string, mobile = false) =>
+    `text-sm transition-all duration-300 hover:text-[#FF6400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF6400] ${
+      active === id
+        ? "text-[#FF6400] font-bold"
+        : mobile || bgWhite
+          ? "text-black"
+          : "text-white"
+    }`;
 
   useEffect(() => {
-    const handleScroll = () => {
-      links.forEach((id) => {
-        const section = document.getElementById(id.id);
+    const updateActiveSection = () => {
+      const currentSection = links.find((link) => {
+        const section = document.getElementById(link.id);
         if (!section) return;
 
         const rect = section.getBoundingClientRect();
 
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          setActive(id.id);
-        }
+        return rect.top <= 100 && rect.bottom >= 100;
       });
+
+      if (currentSection) {
+        setActive(currentSection.id);
+      }
 
       setBgWhite(window.scrollY > 0);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection);
+    return () => window.removeEventListener("scroll", updateActiveSection);
   }, []);
 
   return (
@@ -49,12 +61,11 @@ export function Header() {
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
+                  setActive(id.id);
+                  e.currentTarget.blur();
                   handleScroll(id.id);
                 }}
-                className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
-              ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : bgWhite ? "text-black" : "text-white"}
-              
-              `}
+                className={getLinkClassName(id.id)}
               >
                 {id.label}
               </a>
@@ -88,12 +99,12 @@ export function Header() {
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
+                    setActive(id.id);
+                    e.currentTarget.blur();
                     handleScroll(id.id);
                     setMenuOpen(false);
                   }}
-                  className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
-              ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : "text-black"}
-              `}
+                  className={getLinkClassName(id.id, true)}
                 >
                   {id.label}
                 </a>
