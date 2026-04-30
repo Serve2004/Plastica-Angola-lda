@@ -20,9 +20,14 @@ export function Product({ id, name, image, slug, products }: ProductProps) {
       key={id}
     >
       <div
-        className="p-0.5 rounded-t-[8px] h-45 w-full flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${image})` }}
-      />
+        className=" rounded-t-[8px] h-45 w-full overflow-hidden"
+      >
+        <img
+          src={image}
+          alt={"product image"}
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
       <div className="px-6.5 pt-3 flex flex-col items-start h-full w-full">
         <h2 className="poppins-semibold text-[15px]">{name}</h2>
         <div className="flex flex-col items-start gap-1 mt-2">
@@ -41,7 +46,6 @@ export function Product({ id, name, image, slug, products }: ProductProps) {
         >
           Ver mais
         </Link>
-        
       </div>
     </div>
   );
