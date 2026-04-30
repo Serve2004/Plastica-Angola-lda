@@ -101,7 +101,7 @@ export function Header() {
         </div>
       )}
 
-      <Button className="p-3 sm:p-4.5 rounded-[35px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg hidden md:flex">
+      <Button className="p-3 sm:p-4.5 rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg hidden md:flex">
         <img
           src={assets.social}
           alt="Social Media"

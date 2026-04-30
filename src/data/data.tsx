@@ -62,14 +62,14 @@ export const slidesTablet = [
 export const products = [
   {
     id: 1,
-    logo: <ChefHatIcon size={50} color="#0088EB" />,
+    slug: "utencilios-de-cozinha",
     name: "Utensílios de cozinha",
     image: assets.utencilios,
     products: ["Tigelas", "Tabuleiros", "Escorredores", "Recipientes"],
   },
   {
     id: 2,
-    logo: <img src={assets.box} alt="box" className="w-12.5 h-12.5" />,
+    slug: "embalagens",
     name: "Embalagens",
     image: assets.embalagem,
     products: [
@@ -81,7 +81,7 @@ export const products = [
   },
   {
     id: 3,
-    logo: <img src={assets.cubos} alt="box" className="w-12.5 h-12.5" />,
+    slug: "brinquedos",
     name: "Brinquedos",
     image: assets.toy,
     products: [
@@ -93,14 +93,14 @@ export const products = [
   },
   {
     id: 4,
-    logo: <img src={assets.eco} alt="box" className="w-12.5 h-12.5" />,
+    slug: "solucoes-industriais",
     name: "Soluções Industriais",
     image: assets.tubos,
     products: ["Tubos e conexões", "Paletes", "Contentores", "Peças Técnicas"],
   },
   {
     id: 5,
-    logo: <img src={assets.chave} alt="box" className="w-12.5 h-12.5" />,
+    slug: "producao-personalizada",
     name: "Produção Personalizada",
     image: assets.material,
     products: [
@@ -108,6 +108,192 @@ export const products = [
       "Protótipos",
       "Peças sob medida",
       "Projetos especiais",
+    ],
+  },
+];
+
+export const seeMoreProducts = [
+  {
+    id: 1,
+    slug: "utencilios-de-cozinha",
+    name: "Utensílios de cozinha",
+    logo: <ChefHatIcon size={48} color="#FF6400" />,
+    label:
+      "Soluções práticas e duráveis para o dia a dia na cozinha, produzidas com materiais de alta qualidade e design ergonómico.",
+    products: [
+      {
+        id: 1,
+        name: "Tigela",
+        label:
+          "Diversos tamanhos e cores, ideais para servir e armazenar alimentos.",
+        img: assets.tigela,
+      },
+      {
+        id: 2,
+        name: "Recipiente",
+        label: "Herméticos e empilháveis para conservação de alimentos.",
+        img: assets.recipiente,
+      },
+      {
+        id: 3,
+        name: "Copos",
+        label: "Copos reutilizáveis e descartáveis para festas e eventos.",
+        img: assets.copos,
+      },
+      {
+        id: 4,
+        name: "Baú Transparente",
+        label: "Prático e resistente para armazenar com seguraça.",
+        img: assets.bauTransparente,
+      },
+      {
+        id: 5,
+        name: "Cesto",
+        label: "Leve e resistente para organização e transporte.",
+        img: assets.cesto,
+      },
+      {
+        id: 6,
+        name: "Tigela",
+        label: "Ideal para preparar, servir e armazenar alimentos.",
+        img: assets.tigela1,
+      },
+    ],
+  },
+  {
+    id: 2,
+    slug: "embalagens",
+    name: "Embalagens",
+    logo: <img src={assets.box} alt="box" className="w-15 h-15" />,
+    label:
+      "Embalagens plásticas para diferentes indústrias, com foco em segurança, durabilidade e personalização conforme a necessidade do cliente.",
+    products: [
+      {
+        id: 1,
+        name: "Caixa alimentar",
+        label: "Certificadas para contacto com alimentos, em vários formatos.",
+        img: assets.caixaAlimentar,
+      },
+      // {
+      //   id: 2,
+      //   name: "Saco plástico",
+      //   label: "Saco plástico para resíduos",
+      //   img: assets.saco,
+      // },
+      // {
+      //   id: 3,
+      //   name: "Filme stretch",
+      //   label: "Filme stretch para embalagem",
+      //   img: assets.filme,
+      // },
+      // {
+      //   id: 4,
+      //   name: "Embalagem personalizada",
+      //   label: "Embalagem personalizada conforme a necessidade do cliente",
+      //   img: assets.embalagemPersonalizada,
+      // },
+    ],
+  },
+  {
+    id: 3,
+    slug: "brinquedos",
+    logo: <img src={assets.cubos} alt="box" className="w-15 h-15" />,
+    name: "Brinquedos",
+    label:
+      "Brinquedos seguros, coloridos e divertidos, produzidos com materiais não tóxicos e testados para a diversão e apredizagem das crianças.",
+    products: [
+      {
+        id: 1,
+        name: "Brinquedos educativos",
+        label: "Estimulam o raciocínio e a coordenação motora",
+        img: assets.toy,
+      },
+      {
+        id: 2,
+        name: "Jogos de encaixe",
+        label: "Peças coloridas que incentivam a criatividade.",
+        img: assets.toy,
+      },
+      {
+        id: 3,
+        name: "Bonecos e figuras",
+        label: "Personagens variados em plástico resistente.",
+        img: assets.toy,
+      },
+      {
+        id: 4,
+        name: "Brinquedos de praia",
+        label: "Pás, baldes e formas para brincar ao ar livre.",
+        img: assets.toy,
+      },
+    ],
+  },
+  {
+    id: 4,
+    slug: "solucoes-industriais",
+    logo: <img src={assets.eco} alt="box" className="w-15 h-15" />,
+    name: "Soluções Industriais",
+    label:
+      "Produtos plásticos técnicos e de alta performance para o setor industrial, com resistência e precisão dimensional.",
+    products: [
+      {
+        id: 1,
+        name: "Tubos e conexões",
+        label: "Para sistemas hidráulicos e industriais.",
+        img: assets.tuboConexao,
+      },
+      {
+        id: 2,
+        name: "Paletes",
+        label: "Resistentes, leves e reutilizáveis para logística.",
+        img: assets.tubos,
+      },
+      {
+        id: 3,
+        name: "Contentores",
+        label: "Armazenamento e transporte em grande escala.",
+        img: assets.tubos,
+      },
+      {
+        id: 4,
+        name: "Peças técnicas",
+        label: "Componentes específicos para linhas de produção.",
+        img: assets.tubos,
+      },
+    ],
+  },
+  {
+    id: 5,
+    slug: "producao-personalizada",
+    logo: <img src={assets.chave} alt="box" className="w-15 h-15" />,
+    name: "Produção Personalizada",
+    label:
+      "Desenvolvemos projetos exclusivos do conceito à produção, com moldes dedicados e acompanhamento em todas as etapas.",
+    products: [
+      {
+        id: 1,
+        name: "Caixa alimentar",
+        label: "Certificadas para contacto com alimentos, em vários formatos.",
+        img: assets.caixaAlimentar,
+      },
+      {
+        id: 2,
+        name: "Recipiente",
+        label: "Herméticos e empilháveis para conservação de alimentos.",
+        img: assets.recipiente,
+      },
+      {
+        id: 3,
+        name: "Copos",
+        label: "Copos reutilizáveis e descartáveis para festas e eventos.",
+        img: assets.copos,
+      },
+      {
+        id: 4,
+        name: "Baú Transparente",
+        label: "Prático e resistente para armazenar com seguraça.",
+        img: assets.bauTransparente,
+      },
     ],
   },
 ];
@@ -147,7 +333,7 @@ export const contact = [
     color: "#0088EB",
     name: "E-mail",
     label: "Envie-nos e-mail",
-    description: "plastangola@gmail.com",
+    description: "geral@plasticaangola.ao",
   },
   {
     id: 3,
@@ -155,7 +341,7 @@ export const contact = [
     color: "#8A38F5",
     name: "Telefone",
     label: "Ligue para nós",
-    description: "+244 999 999 999",
+    description: "+244 222 123 456",
   },
   {
     id: 4,

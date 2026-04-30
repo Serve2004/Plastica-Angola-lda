@@ -37,6 +37,14 @@ import slideTablet2 from "./IMGT2.svg";
 import slideTablet3 from "./IMGT3.svg";
 import slideTablet4 from "./IMGT4.svg";
 import slideTablet5 from "./IMGT5.svg";
+import tigela from "./tigela.svg";
+import recipiente from "./recipiente.svg";
+import copos from "./copos.svg";
+import bauTransparente from "./bau-transparente.svg";
+import cesto from "./cesto.svg";
+import tigela1 from "./tigela1.svg";
+import caixaAlimentar from "./caixa-alimentar.svg";
+import tuboConexao from "./tubo-conexao.svg";
 
 export const assets = {
   chave,
@@ -78,4 +86,12 @@ export const assets = {
   slideTablet3,
   slideTablet4,
   slideTablet5,
+  tigela,
+  recipiente,
+  copos,
+  bauTransparente,
+  cesto,
+  tigela1,
+  caixaAlimentar,
+  tuboConexao,
 };
