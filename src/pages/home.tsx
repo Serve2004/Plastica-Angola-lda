@@ -1,24 +1,19 @@
+import { assets } from "@/assets";
+import { ContactInfo } from "@/components/about";
+import HeroCarousel, { Carousel } from "@/components/carrosel";
+import { Product } from "@/components/product";
+import { Counter } from "@/components/ui/counter/counter";
+import { statics, products, contact } from "@/data/data";
 import {
   CaretRightIcon,
   CheckFatIcon,
-  EnvelopeIcon,
   WhatsappLogoIcon,
+  EnvelopeIcon,
 } from "@phosphor-icons/react";
-import { assets } from "./assets";
-import { Button } from "./components/ui/button";
-import { Counter } from "./components/ui/counter/counter";
-import { contact, products, statics } from "./data/data";
-import { Header } from "./components/header";
-import { Product } from "./components/product";
-import HeroCarousel, { Carousel } from "./components/carrosel";
-import { ContactInfo } from "./components/about";
-import { Footer } from "./components/footer";
 
-export function App() {
-  
+export function HomePage() {
   return (
     <div>
-      <Header />
       <section className="min-h-screen overflow-hidden" id="home">
         <HeroCarousel>
           <div className="px-2 sm:px-4 md:px-8 xl:px-10 pt-12 flex flex-col justify-center gap-2 sm:gap-4 md:gap-6 h-full text-white">
@@ -37,16 +32,22 @@ export function App() {
               </span>
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 md:gap-6 mt-3 sm:mt-5">
-              <Button className="w-full sm:w-auto h-10 sm:h-12 md:h-14 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-[#FF6400] hover:bg-[#CD5304] text-xs sm:text-sm md:text-lg cursor-pointer">
-                Solicitar orçamento{" "}
+              <a
+                href={`#contact`}
+                className="w-full flex justify-center items-center sm:w-auto h-10 sm:h-12 md:h-14 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-[#FF6400] hover:bg-[#CD5304] text-xs sm:text-sm md:text-lg cursor-pointer"
+              >
+                Fale conosco{" "}
                 <CaretRightIcon
                   size={20}
                   className="sm:w-6 sm:h-6 md:w-8 md:h-8"
                 />
-              </Button>
-              <Button className="w-full sm:w-auto h-10 sm:h-12 md:h-14 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-transparent hover:bg-[#0089eb49] border border-white text-xs sm:text-sm md:text-lg cursor-pointer">
+              </a>
+              <a
+                href={`#products`}
+                className="w-full flex justify-center items-center sm:w-auto h-10 sm:h-12 md:h-14 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-transparent hover:bg-[#0089eb49] border border-white text-xs sm:text-sm md:text-lg cursor-pointer"
+              >
                 Ver Produtos
-              </Button>
+              </a>
             </div>
           </div>
         </HeroCarousel>
@@ -54,21 +55,21 @@ export function App() {
 
       {/* SECTION ABOUT */}
       <section
-        className="px-2 sm:px-4 md:px-8 xl:px-10 pt-6 sm:pt-10 md:pt-20 min-h-screen w-full flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-10"
+        className="px-2 sm:px-4 md:px-8 xl:px-10 pt-6 sm:pt-10 md:pt-20 min-h-screen w-full flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-10 bg-[#EFEFEF]"
         id="about"
       >
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 sm:gap-6">
-          <div className="flex-1">
+          <div className="flex-1 max-w-136.5">
             <h1 className="poppins-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl text-[#343434]">
               Excelência em Soluções Plásticas para Angola
             </h1>
-            <p className="poppins-medium text-[11px] sm:text-xs md:text-sm text-[#777777] mt-2">
+            <p className="poppins-medium text-[11px] sm:text-xs md:text-sm lg:text-[17px] text-[#777777] mt-2">
               A PLASTICA ANGOLA é uma empresa angolana líder no fornecimento de
               produtos e soluções em plásticos. Com mais de 15 anos de
               experiência, especializamo-nos em oferecer uma ampla gama de
               artigos plásticos de alta qualidade.
             </p>
-            <p className="poppins-medium text-[11px] sm:text-xs md:text-sm text-[#777777] mt-3 sm:mt-5">
+            <p className="poppins-medium text-[11px] sm:text-xs md:text-sm lg:text-[17px] text-[#777777] mt-3 sm:mt-5">
               Trabalhamos com os melhores materiais e tecnologias para garantir
               produtos duráveis, funcionais e esteticamente superiores,
               atendendo às necessidades dos setores residencial, comercial e
@@ -81,7 +82,7 @@ export function App() {
                   key={item.id}
                 >
                   <div className="p-0.5 text-sm sm:text-base">{item.logo}</div>
-                  <h2 className="poppins-bold text-sm sm:text-lg md:text-xl w-16 sm:w-20 text-[#0088EB] text-center">
+                  <h2 className="poppins-bold text-sm sm:text-lg md:text-xl lg:text-[32px] w-16 sm:w-20 text-[#0088EB] text-center">
                     <Counter end={item.number} />
                     {item.symbol}
                   </h2>
@@ -95,7 +96,7 @@ export function App() {
           <img
             src={assets.about}
             alt="Sobre a Plástica Angola"
-            className="w-full lg:max-w-md xl:max-w-135 rounded-xl sm:rounded-2xl"
+            className="w-full lg:max-w-141 xl:max-w-135 rounded-xl sm:rounded-2xl"
           />
         </div>
       </section>
@@ -117,10 +118,11 @@ export function App() {
             {products.map((item) => (
               <Product
                 id={item.id}
-                logo={item.logo}
                 name={item.name}
                 image={item.image}
+                slug={item.slug}
                 products={item.products}
+                key={item.id}
               />
             ))}
           </div>
@@ -151,14 +153,17 @@ export function App() {
           Estamos sempre à procura de novas parcerias estratégicas para crescer
           juntos e oferecer as melhores soluções ao mercado angolano.
         </p>
-        <Button className="px-4 sm:px-8 py-2 sm:py-4 rounded-full bg-[#FF6400] hover:bg-[#CD5304] text-xs sm:text-sm md:text-lg mt-3 sm:mt-5">
+        <a
+          href={`#contact`}
+          className="w-full flex justify-center items-center sm:w-auto h-10 sm:h-12 md:h-14 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-[#FF6400] hover:bg-[#CD5304] text-xs sm:text-sm md:text-lg cursor-pointer text-white gap-2 mt-3 sm:mt-5"
+        >
           <img
             src={assets.social}
             alt="Social Media"
             className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8"
           />{" "}
-          Fale conosco
-        </Button>
+          Fale conosco agora
+        </a>
       </section>
 
       {/* SECTION CONTACT */}
@@ -174,7 +179,7 @@ export function App() {
             Oferecemos uma vasta gama de produtos e serviços para atender todas
             as suas necessidades em artigos plásticos
           </p>
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 mt-6 sm:mt-10 md:mt-16">
+          <div className="flex flex-wrap justify-center w-full max-w-257.5 gap-3 sm:gap-6 mt-6 sm:mt-10 md:mt-16">
             {contact.map((item) => (
               <ContactInfo
                 key={item.id}
@@ -189,12 +194,12 @@ export function App() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row h-auto lg:h-96 w-full max-w-4xl p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-linear-to-r from-[#FF6400] to-[#CD5304] border border-red-500 mt-6 sm:mt-10 items-center justify-center mb-12 sm:mb-16 gap-4 sm:gap-6">
-          <div className="flex flex-col flex-1">
-            <h2 className="poppins-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white">
+        <div className="flex flex-col lg:flex-row h-auto lg:h-96 w-full max-w-257.5  p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-linear-to-b from-[#FF6400] to-[#CD5304] border border-red-500 mt-25 items-center justify-center mb-12 sm:mb-16 gap-4 sm:gap-6 text-white">
+          <div className="flex flex-col flex-1 w-full lg:w-117.5">
+            <h2 className="poppins-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
               Pronto para começar?
             </h2>
-            <p className="poppins-medium text-xs sm:text-sm md:text-lg text-[#E9E2E2E5] mt-2 sm:mt-4">
+            <p className="poppins-medium text-xs sm:text-sm md:text-lg  mt-2 sm:mt-4">
               Entre em contacto connosco hoje mesmo e descubra como podemos
               ajudar o seu negócio com as melhores soluções em plásticos.
             </p>
@@ -228,15 +233,15 @@ export function App() {
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-2 sm:gap-3 w-full sm:w-auto">
-            <button className="flex justify-center items-center w-full lg:w-auto h-10 sm:h-12 md:h-16 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-white hover:bg-[#FFEDD8] text-sm sm:text-lg md:text-xl text-[#FF6400] cursor-pointer gap-2">
+          <div className="flex flex-col gap-2 sm:gap-3 w-full lg:w-105.75">
+            <button className="flex justify-center items-center  h-10 sm:h-12 md:h-16 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-white hover:bg-[#FFEDD8] text-sm sm:text-lg md:text-xl text-[#FF6400] cursor-pointer gap-2">
               <WhatsappLogoIcon
                 size={20}
                 className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10"
               />
               Contactar via WhatsApp
             </button>
-            <button className="flex justify-center items-center w-full lg:w-auto h-10 sm:h-12 md:h-16 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-[#FF8800] hover:bg-[#FF9925] text-sm sm:text-lg md:text-xl text-white cursor-pointer gap-2">
+            <button className="flex justify-center items-center  h-10 sm:h-12 md:h-16 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-[#FF8800] hover:bg-[#FF9925] text-sm sm:text-lg md:text-xl text-white cursor-pointer gap-2">
               <EnvelopeIcon
                 size={20}
                 className="sm:w-6 sm:h-6 md:w-9.25 md:h-9.25"
@@ -246,9 +251,6 @@ export function App() {
           </div>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <Footer />
     </div>
   );
 }
