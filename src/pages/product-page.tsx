@@ -55,13 +55,13 @@ export function ProductPage() {
             {product.products.map((item) => (
               <div
                 key={item.id}
-                className="w-92.5 h-92.5 rounded-xl overflow-hidden border border-[#C3BBBB] bg-[#FFF0E6] hover:-translate-y-3 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                className="w-92.5 h-80.75 rounded-xl overflow-hidden border border-[#C3BBBB] bg-[#FFF0E6] hover:-translate-y-3 hover:shadow-lg transition-all duration-300 cursor-pointer"
               >
                 <div className="h-56 bg-white flex items-center justify-center overflow-hidden">
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
 

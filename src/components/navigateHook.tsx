@@ -1,5 +1,14 @@
 import { useNavigate } from "react-router-dom";
 
+/**
+ * Hook para navegação e scroll suave
+ *
+ * Uso em um <a>:
+ * const handleScroll = useScroll();
+ * <a href="#" onClick={(e) => { e.preventDefault(); handleScroll("section-id"); }}>
+ *   Link
+ * </a>
+ */
 export function useScroll() {
   const navigate = useNavigate();
 

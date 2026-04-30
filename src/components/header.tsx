@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { links } from "@/data/data";
 import { ListIcon, XIcon } from "@phosphor-icons/react";
+import { useScroll } from "./navigateHook";
 
 export function Header() {
   const [active, setActive] = useState("home");
   const [bgWhite, setBgWhite] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const handleScroll = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +46,11 @@ export function Header() {
           {links.map((id) => (
             <li key={id.id}>
               <a
-                href={`#${id.id}`}
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScroll(id.id);
+                }}
                 className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
               ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : bgWhite ? "text-black" : "text-white"}
               
@@ -79,8 +85,12 @@ export function Header() {
             {links.map((id) => (
               <li key={id.id}>
                 <a
-                  href={`#${id.id}`}
-                  onClick={() => setMenuOpen(false)}
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScroll(id.id);
+                    setMenuOpen(false);
+                  }}
                   className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
               ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : "text-black"}
               `}

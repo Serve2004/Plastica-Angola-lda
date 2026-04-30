@@ -45,6 +45,12 @@ import cesto from "./cesto.svg";
 import tigela1 from "./tigela1.svg";
 import caixaAlimentar from "./caixa-alimentar.svg";
 import tuboConexao from "./tubo-conexao.svg";
+import baldes from "./baldes.svg";
+import bacia from "./bacia.svg";
+import caixaArrumacao from "./caixa-arrumacao.svg";
+import artigosLimpeza from "./artigos-limpeza.svg";
+import baldesLixo from "./baldes-lixo.svg";
+import cadeiras from "./cadeiras.svg";
 
 export const assets = {
   chave,
@@ -94,4 +100,10 @@ export const assets = {
   tigela1,
   caixaAlimentar,
   tuboConexao,
+  baldes,
+  bacia,
+  caixaArrumacao,
+  artigosLimpeza,
+  baldesLixo,
+  cadeiras,
 };
