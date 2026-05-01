@@ -1,6 +1,6 @@
 import { contact } from "@/data/data";
 import { ContactCtaCard } from "./contact-cta-card";
-import { ContactInfo } from "../ContactInfo";
+import { ContactInfo } from "@/components/contactInfo";
 
 export function ContactSection() {
   return (
