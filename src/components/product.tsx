@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 
 interface ProductProps {
-    id: number;
-    name: string;
+  id: number;
+  name: string;
   image: string;
   slug: string;
-    products: string[];
+  products: string[];
 }
-
 
 export function Product({ id, name, image, slug, products }: ProductProps) {
   return (
@@ -19,33 +18,32 @@ export function Product({ id, name, image, slug, products }: ProductProps) {
           transition-all duration-300 mt-10 h-78 w-60  overflow-hidden border border-[#C3BBBBE5] cursor-pointer "
       key={id}
     >
-      <div
-        className=" rounded-t-[8px] h-45 w-full overflow-hidden"
-      >
+      <div className=" rounded-t-[8px] h-45 w-full overflow-hidden">
         <img
           src={image}
           alt={"product image"}
           className="w-full h-full object-cover object-center"
         />
       </div>
-      <div className="px-6.5 pt-3 flex flex-col items-start h-full w-full">
-        <h2 className="poppins-semibold text-[15px]">{name}</h2>
-        <div className="flex flex-col items-start gap-1 mt-2">
-          {products.map((product, index) => (
-            <p
-              key={index}
-              className="poppins-medium text-[13px] text-[#777777]"
-            >
-              <span className="poppins-bold text-[#1BC69A]">•</span> {product}
-            </p>
-          ))}
+      <div className="pt-3 flex flex-col h-full w-full gap-4">
+        <div className="pl-6 flex flex-col items-start">
+          <h2 className="poppins-semibold text-[15px]">{name}</h2>
+          <div className="flex flex-col items-start gap-1 mt-2">
+            {products.map((product, index) => (
+              <p key={index} className="inter text-[14px] text-[#777777]">
+                <span className="inter-bold text-[#1BC69A]">•</span> {product}
+              </p>
+            ))}
+          </div>
         </div>
-        <Link
-          to={`/product/${slug}`}
-          className="w-43.5 mb-2 p-0.75 flex justify-center rounded-lg bg-white text-[#777777] poppins-medium text-[13px] mt-auto hover:bg-[#FF6400] hover:text-white border-[#C3BBBBE5] border transition-colors duration-300 cursor-pointer"
-        >
-          Ver mais
-        </Link>
+        <div className="flex w-full items-center px-6.5">
+          <Link
+            to={`/product/${slug}`}
+            className="w-full h-7 flex justify-center items-center rounded-[8px] bg-white text-[#777777] montserrat-medium text-[13px] mt-auto hover:bg-[#FF6400] hover:text-white border-[#C3BBBBE5] border transition-colors duration-300 cursor-pointer"
+          >
+            Ver mais
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ export const statics = [
     logo: <UsersIcon size={46} weight="fill" color="#0088EB" />,
     number: 500,
     symbol: "+",
-    description: "clientes",
+    description: "Clientes",
   },
   {
     id: 3,
@@ -62,7 +62,7 @@ export const slidesTablet = [
 export const products = [
   {
     id: 1,
-    slug: "utencilios-de-cozinha",
+    slug: "utensilios-de-cozinha",
     name: "Utensílios de cozinha",
     image: assets.utencilios,
     products: ["Tigelas", "Tabuleiros", "Escorredores", "Recipientes"],
@@ -73,7 +73,7 @@ export const products = [
     name: "Embalagens",
     image: assets.embalagem,
     products: [
-      "Caixa alimentares",
+      "Caixas alimentares",
       "Sacos plásticos",
       "Filmes stretch",
       "Embalagens personalizadas",
@@ -100,7 +100,7 @@ export const products = [
   },
   {
     id: 5,
-    slug: "produto-domesticos",
+    slug: "produtos-domesticos",
     name: "Produtos Domésticos",
     image: assets.material,
     products: [
@@ -115,7 +115,7 @@ export const products = [
 export const seeMoreProducts = [
   {
     id: 1,
-    slug: "utencilios-de-cozinha",
+    slug: "utensilios-de-cozinha",
     name: "Utensílios de cozinha",
     logo: <ChefHatIcon size={48} color="#FF6400" />,
     label:
@@ -200,7 +200,7 @@ export const seeMoreProducts = [
     logo: <img src={assets.cubos} alt="box" className="w-15 h-15" />,
     name: "Brinquedos",
     label:
-      "Brinquedos seguros, coloridos e divertidos, produzidos com materiais não tóxicos e testados para a diversão e apredizagem das crianças.",
+      "Brinquedos seguros, coloridos e divertidos, produzidos com materiais não tóxicos e testados para a diversão e aprendizagem das crianças.",
     products: [
       {
         id: 1,
@@ -264,7 +264,7 @@ export const seeMoreProducts = [
   },
   {
     id: 5,
-    slug: "produto-domesticos",
+    slug: "produtos-domesticos",
     logo: <img src={assets.chave} alt="box" className="w-15 h-15" />,
     name: "Produtos Domésticos",
     label:
@@ -326,7 +326,7 @@ export const links = [
   { id: "about", label: "Sobre Nós" },
   { id: "products", label: "Produtos" },
   { id: "partners", label: "Parceiros" },
-  { id: "contact", label: "Contatos" },
+  { id: "contact", label: "Contactos" },
 ];
 
 export const contact = [
@@ -343,8 +343,8 @@ export const contact = [
     id: 2,
     logo: <EnvelopeIcon size={32} />,
     color: "#0088EB",
-    name: "E-mail",
-    label: "Envie-nos e-mail",
+    name: "Email",
+    label: "Envie-nos um email",
     description: "geral@plasticaangola.ao",
   },
   {

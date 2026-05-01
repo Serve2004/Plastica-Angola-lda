@@ -5,12 +5,12 @@ export function HeroSection() {
   return (
     <section className="min-h-screen overflow-hidden" id="home">
       <HeroCarousel>
-        <div className="px-2 sm:px-4 md:px-8 xl:px-10 pt-12 flex flex-col justify-center gap-2 sm:gap-4 md:gap-6 h-full text-white">
-          <h1 className="poppins-bold text-xl sm:text-3xl md:text-4xl lg:text-5xl flex flex-col leading-tight ">
+        <div className="px-2 sm:px-4 md:px-8 xl:px-10 lg:pt-12 flex flex-col justify-center gap-2 sm:gap-4 md:gap-6 h-full text-white">
+          <h1 className="poppins-bold text-[34px] sm:text-[56px] md:text-5xl lg:text-6xl flex flex-col leading-tight ">
             Transformamos Ideias em{" "}
             <span className="text-[#FF6400]">Produtos Plásticos</span>
           </h1>
-          <p className="poppins-medium text-xs sm:text-sm md:text-base lg:text-lg flex flex-col text-[#EFEFEF]">
+          <p className="montserrat-medium text-[17px] lg:text-[19px] flex flex-col text-[#EFEFEF]">
             <span>
               Há mais de uma década a fornecer soluções inovadoras em plásticos
               para Angola.

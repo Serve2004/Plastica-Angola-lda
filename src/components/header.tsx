@@ -53,7 +53,7 @@ export function Header() {
 
       <nav className="flex items-center gap-2 sm:gap-4">
         <ul
-          className={`nav-list flex gap-2 sm:gap-4 transition-all duration-1000 ${bgWhite ? "text-black" : "text-white"} hidden md:flex`}
+          className={`nav-list flex gap-2 sm:gap-4 transition-all duration-1000 ${bgWhite ? "text-black" : "text-white"} hidden md:flex `}
         >
           {links.map((id) => (
             <li key={id.id}>

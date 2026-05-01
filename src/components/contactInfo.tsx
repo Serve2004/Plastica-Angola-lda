@@ -23,7 +23,7 @@ export function ContactInfo({
         hover:border-[#0088EB]
         transition-all duration-300
         w-full lg:w-125 sm:w-100 border-[#C3BBBBE5] border
-        flex flex-col sm:flex-row items-start gap-2
+        flex flex-row items-start gap-2
         "
       key={id}
     >
@@ -34,9 +34,15 @@ export function ContactInfo({
         {logo}
       </span>
       <div className="flex flex-col items-start gap-1 flex-1">
-        <h2 className="poppins-semibold text-xl">{name}</h2>
-        <p className="poppins-medium text-[16px] text-[#777777]">{label}</p>
-        <p className="poppins-semibold text-[18px] mt-3.75">{description}</p>
+        <h2 className="poppins-semibold text-xs sm:text-sm md:text-xl">
+          {name}
+        </h2>
+        <p className="inter text-xs sm:text-sm md:text-[16px] text-[#777777]">
+          {label}
+        </p>
+        <p className="poppins-semibold text-xs sm:text-sm md:text-[18px] mt-2.75">
+          {description}
+        </p>
       </div>
     </div>
   );

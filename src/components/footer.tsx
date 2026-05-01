@@ -12,17 +12,19 @@ export function Footer() {
           <div className="flex items-center justify-center w-20 sm:w-25 md:w-35">
             <img src={assets.footer} alt="Footer Logo" />
           </div>
-          <p className="text-[#E9E2E2E5] text-[13px] sm:text-[15px] w-full max-w-xs">
+          <p className=" montserrat text-[13px] sm:text-[15px] w-full max-w-xs text-white">
             Líder angolano em soluções plásticas de alta qualidade para todos os
             setores.
           </p>
         </div>
         <div className="flex flex-col items-start gap-1">
-          <h2 className="text-white font-bold text-sm sm:text-base">LINKS</h2>
+          <h2 className=" montserrat-extrabold text-white text-sm sm:text-base">
+            LINKS
+          </h2>
           {links.map((item) => (
             <div
               key={item.id}
-              className="text-white font-bold text-[13px] sm:text-[15px]"
+              className="text-white poppins-medium text-[13px] sm:text-[15px]"
             >
               <a
                 href="#"
@@ -39,20 +41,20 @@ export function Footer() {
           ))}
         </div>
         <div className="flex flex-col items-start gap-1">
-          <h2 className="text-white font-bold text-sm sm:text-base">
+          <h2 className="text-white montserrat-extrabold text-sm sm:text-base">
             PRODUTOS
           </h2>
           {products.map((item) => (
             <div
               key={item.id}
-              className="flex items-center gap-2 text-[13px] sm:text-[15px]"
+              className="montserrat text-[13px] sm:text-[15px]"
             >
               <p className="text-[#E9E2E2E5]/90">{item.name}</p>
             </div>
           ))}
         </div>
         <div className="flex flex-col items-start gap-1">
-          <h2 className="text-white font-bold text-sm sm:text-base">
+          <h2 className="text-white montserrat-extrabold text-sm sm:text-base">
             CONTACTOS
           </h2>
           <div className="flex flex-col">
@@ -69,7 +71,9 @@ export function Footer() {
                   </span>
                   <p
                     className={
-                      !item.fill ? "text-[#E9E2E2E5]/90" : "text-[#FF6400]"
+                      !item.fill
+                        ? "text-[#E9E2E2E5]/90 montserrat"
+                        : "text-[#FF6400] montserrat"
                     }
                   >
                     {!item.fill ? item.description : item.name}
@@ -81,11 +85,11 @@ export function Footer() {
       </div>
       <div className="flex flex-col md:flex-row md:justify-between items-center w-full md:items-start gap-3 sm:gap-4">
         <div className="flex flex-col">
-          <p className="text-[#E9E2E2E5] text-xs sm:text-sm">
+          <p className="text-[#E9E2E2E5] text-xs sm:text-sm montserrat">
             © {new Date().getFullYear()} Plástica Angola. Todos os direitos
             reservados.
           </p>
-          <p className="text-[#E9E2E2E5] text-xs sm:text-sm">
+          <p className="text-[#E9E2E2E5] text-xs sm:text-sm montserrat">
             Desenvolvido por Serve.io
           </p>
         </div>

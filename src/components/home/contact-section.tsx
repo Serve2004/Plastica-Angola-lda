@@ -1,6 +1,6 @@
-import { ContactInfo } from "@/components/about";
 import { contact } from "@/data/data";
 import { ContactCtaCard } from "./contact-cta-card";
+import { ContactInfo } from "@/components/contactInfo";
 
 export function ContactSection() {
   return (
@@ -12,7 +12,7 @@ export function ContactSection() {
         <h1 className="poppins-bold text-xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-[#343434]">
           Vamos Conversar
         </h1>
-        <p className="poppins-medium text-xs sm:text-sm md:text-lg max-w-xs sm:max-w-md lg:max-w-2xl text-center text-[#777777] mt-3 sm:mt-4">
+        <p className="montserrat-medium text-xs sm:text-sm md:text-lg max-w-xs sm:max-w-md lg:max-w-2xl text-center text-[#777777] mt-3 sm:mt-4">
           Oferecemos uma vasta gama de produtos e serviços para atender todas as
           suas necessidades em artigos plásticos
         </p>
