@@ -10,11 +10,11 @@ export function StatsList() {
           key={item.id}
         >
           <div className="p-0.5 text-sm sm:text-base">{item.logo}</div>
-          <h2 className="poppins-bold text-sm sm:text-lg md:text-xl lg:text-[32px] w-16 sm:w-20 text-[#0088EB] text-center">
+          <h2 className="poppins-bold text-xl lg:text-[32px] w-16 sm:w-20 text-[#0088EB] text-center">
             <Counter end={item.number} />
             {item.symbol}
           </h2>
-          <p className="poppins-medium text-[10px] sm:text-xs md:text-sm text-center">
+          <p className="poppins-medium text-[10px] sm:text-xs md:text-sm text-center text-[#777777]">
             {item.description}
           </p>
         </div>
