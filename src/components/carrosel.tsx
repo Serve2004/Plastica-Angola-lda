@@ -99,7 +99,7 @@ export default function HeroCarousel({
     <div className="relative w-full h-screen">
       <Swiper
         modules={[Autoplay, EffectFade]}
-        effect="fade"
+        effect="flip"
         loop={true}
         autoplay={{
           delay: 10000,
