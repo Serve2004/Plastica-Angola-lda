@@ -41,7 +41,7 @@ export function ContactCtaCard() {
         </div>
         <div className="flex flex-col gap-2 sm:gap-3 w-full lg:w-105.75">
           <a className="flex justify-center items-center h-10 sm:h-12 md:h-16 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-white hover:bg-[#FFEDD8] text-sm sm:text-lg md:text-xl text-[#FF6400] cursor-pointer gap-2"
-          href="https://wa.me/244937785909?text=Sua+Mensagem+Aqui"
+          href="https://wa.me/244937785909?text=Olá!+Vi+o+site+da+vossa+fábrica+e+gosto+da+qualidade+do+vosso+plástico.+Gostaria+de+falar+com+as+Vendas"
           >
             <WhatsappLogoIcon
               size={20}
