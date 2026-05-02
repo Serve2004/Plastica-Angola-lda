@@ -129,7 +129,7 @@ export default function HeroCarousel({
       <div className="absolute bottom-4 right-1 md:right-10 flex gap-6 z-50">
         <button
           onClick={handlePrev}
-          className="rounded-full cursor-pointer"
+          className="rounded-full cursor-pointer text-white hover:text-[#FF6400] transition-colors duration-300"
           aria-label="Voltar"
         >
           <ArrowCircleLeftIcon size={42} />
@@ -137,7 +137,7 @@ export default function HeroCarousel({
 
         <button
           onClick={handleNext}
-          className="rounded-full cursor-pointer"
+          className="rounded-full cursor-pointer text-white hover:text-[#FF6400] transition-colors duration-300"
           aria-label="Avançar"
         >
           <ArrowCircleRightIcon size={42} />
