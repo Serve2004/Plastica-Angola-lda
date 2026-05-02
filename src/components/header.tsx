@@ -3,44 +3,30 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { links } from "@/data/data";
 import { ListIcon, XIcon } from "@phosphor-icons/react";
-import { useScroll } from "./navigateHook";
 
 export function Header() {
   const [active, setActive] = useState("home");
   const [bgWhite, setBgWhite] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const handleScroll = useScroll();
-  
-  const getLinkClassName = (id: string, mobile = false) =>
-    `text-sm transition-all duration-300 hover:text-[#FF6400] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF6400] ${
-      active === id
-        ? "text-[#FF6400] font-bold"
-        : mobile || bgWhite
-          ? "text-black"
-          : "text-white"
-    }`;
 
   useEffect(() => {
-    const updateActiveSection = () => {
-      const currentSection = links.find((link) => {
-        const section = document.getElementById(link.id);
+    const handleScroll = () => {
+      links.forEach((id) => {
+        const section = document.getElementById(id.id);
         if (!section) return;
 
         const rect = section.getBoundingClientRect();
 
-        return rect.top <= 100 && rect.bottom >= 100;
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          setActive(id.id);
+        }
       });
-
-      if (currentSection) {
-        setActive(currentSection.id);
-      }
 
       setBgWhite(window.scrollY > 0);
     };
 
-    updateActiveSection();
-    window.addEventListener("scroll", updateActiveSection);
-    return () => window.removeEventListener("scroll", updateActiveSection);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -53,19 +39,16 @@ export function Header() {
 
       <nav className="flex items-center gap-2 sm:gap-4">
         <ul
-          className={`nav-list flex gap-2 sm:gap-4 transition-all duration-1000 ${bgWhite ? "text-black" : "text-white"} hidden md:flex `}
+          className={`nav-list flex gap-2 sm:gap-4 transition-all duration-1000 ${bgWhite ? "text-black" : "text-white"} hidden md:flex`}
         >
           {links.map((id) => (
             <li key={id.id}>
               <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActive(id.id);
-                  e.currentTarget.blur();
-                  handleScroll(id.id);
-                }}
-                className={getLinkClassName(id.id)}
+                href={`#${id.id}`}
+                className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
+              ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : bgWhite ? "text-black" : "text-white"}
+              
+              `}
               >
                 {id.label}
               </a>
@@ -96,40 +79,36 @@ export function Header() {
             {links.map((id) => (
               <li key={id.id}>
                 <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setActive(id.id);
-                    e.currentTarget.blur();
-                    handleScroll(id.id);
-                    setMenuOpen(false);
-                  }}
-                  className={getLinkClassName(id.id, true)}
+                  href={`#${id.id}`}
+                  onClick={() => setMenuOpen(false)}
+                  className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
+              ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : "text-black"}
+              `}
                 >
                   {id.label}
                 </a>
               </li>
             ))}
           </ul>
-          <a className="w-full rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg">
+          <Button className="w-full rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg">
             <img
               src={assets.social}
               alt="Social Media"
               className="w-5 sm:w-7.5 h-5 sm:h-7.5"
             />{" "}
             Fale conosco
-          </a>
+          </Button>
         </div>
       )}
 
-      <a className="p-3 sm:p-4.5 rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg hidden md:flex">
+      <Button className="p-3 sm:p-4.5 rounded-[35px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg hidden md:flex">
         <img
           src={assets.social}
           alt="Social Media"
           className="w-5 sm:w-7.5 h-5 sm:h-7.5"
         />{" "}
         Fale conosco
-      </a>
+      </Button>
     </header>
   );
 }
