@@ -40,13 +40,15 @@ export function ContactCtaCard() {
           </div>
         </div>
         <div className="flex flex-col gap-2 sm:gap-3 w-full lg:w-105.75">
-          <button className="flex justify-center items-center h-10 sm:h-12 md:h-16 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-white hover:bg-[#FFEDD8] text-sm sm:text-lg md:text-xl text-[#FF6400] cursor-pointer gap-2">
+          <a className="flex justify-center items-center h-10 sm:h-12 md:h-16 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-white hover:bg-[#FFEDD8] text-sm sm:text-lg md:text-xl text-[#FF6400] cursor-pointer gap-2"
+          href="https://wa.me/244937785909?text=Sua+Mensagem+Aqui"
+          >
             <WhatsappLogoIcon
               size={20}
               className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10"
             />
             Contactar via WhatsApp
-          </button>
+          </a>
           <button className="flex justify-center items-center h-10 sm:h-12 md:h-16 px-4 sm:px-6 md:px-8 py-2 rounded-lg bg-[#FF8800] hover:bg-[#FF9925] text-sm sm:text-lg md:text-xl text-white cursor-pointer gap-2">
             <EnvelopeIcon
               size={20}
