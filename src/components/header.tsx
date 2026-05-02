@@ -111,25 +111,25 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <Button className="w-full rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg">
+          <a className="w-full rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg">
             <img
               src={assets.social}
               alt="Social Media"
               className="w-5 sm:w-7.5 h-5 sm:h-7.5"
             />{" "}
             Fale conosco
-          </Button>
+          </a>
         </div>
       )}
 
-      <Button className="p-3 sm:p-4.5 rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg hidden md:flex">
+      <a className="p-3 sm:p-4.5 rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg hidden md:flex">
         <img
           src={assets.social}
           alt="Social Media"
           className="w-5 sm:w-7.5 h-5 sm:h-7.5"
         />{" "}
         Fale conosco
-      </Button>
+      </a>
     </header>
   );
 }
