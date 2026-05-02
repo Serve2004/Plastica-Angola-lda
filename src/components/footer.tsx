@@ -101,7 +101,7 @@ export function Footer() {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white w-8 sm:w-9 h-8 sm:h-9 rounded-full bg-[#6C6B6B80]/30 p-1.5 sm:p-2"
+                className="flex items-center gap-2 text-white w-8 sm:w-9 h-8 sm:h-9 rounded-full bg-[#6C6B6B80]/30 p-1.5 sm:p-2 transition-all duration-300 hover:bg-[#FF6400] cursor-pointer"
               >
                 {item.logo}
               </a>
