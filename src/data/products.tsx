@@ -207,7 +207,7 @@ export const seeMoreProducts = [
   {
     id: 5,
     slug: "produtos-domesticos",
-    logo: <img src={assets.chave} alt="box" className="w-15 h-15" />,
+    logo: <img src={assets.casa} alt="box" className="w-15 h-15" />,
     name: "Produtos Domésticos",
     label:
       "Artigos plásticos para o lar, práticos e duráveis, que facilitam a organização, limpeza e o dia a dia em casa.",

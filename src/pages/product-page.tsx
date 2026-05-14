@@ -142,7 +142,9 @@ export function ProductPage() {
         <ImageLightbox
           src={activeLightboxItem.img}
           alt={
-            "name" in activeLightboxItem ? activeLightboxItem.name : "produto"
+            "name" in activeLightboxItem
+              ? (activeLightboxItem.name as string)
+              : "produto"
           }
           currentIndex={lightboxIndex ?? 0}
           total={simpleImages.length}

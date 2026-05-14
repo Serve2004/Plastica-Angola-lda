@@ -4,19 +4,12 @@ import { XIcon, ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface ImageLightboxProps {
-  /** URL da imagem a mostrar */
   src: string;
-  /** Texto alternativo */
   alt?: string;
-  /** Índice actual (para navegação quando usado em lista) */
   currentIndex?: number;
-  /** Total de imagens na lista */
   total?: number;
-  /** Navegar para a imagem anterior */
   onPrev?: () => void;
-  /** Navegar para a próxima imagem */
   onNext?: () => void;
-  /** Fechar o lightbox */
   onClose: () => void;
 }
 
