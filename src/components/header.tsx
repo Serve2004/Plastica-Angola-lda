@@ -1,13 +1,15 @@
 import { assets } from "@/assets";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { links } from "@/data/data";
+import { links } from "@/data/navigation-links";
 import { ListIcon, XIcon } from "@phosphor-icons/react";
+import { useScroll } from "./navigateHook";
 
 export function Header() {
   const [active, setActive] = useState("home");
   const [bgWhite, setBgWhite] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const handleNavigate = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,8 +46,13 @@ export function Header() {
           {links.map((id) => (
             <li key={id.id}>
               <a
-                href={`#${id.id}`}
-                className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.currentTarget.blur();
+                  handleNavigate(id.id);
+                }}
+                className={`text-[16px] transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
               ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : bgWhite ? "text-black" : "text-white"}
               
               `}
@@ -79,9 +86,14 @@ export function Header() {
             {links.map((id) => (
               <li key={id.id}>
                 <a
-                  href={`#${id.id}`}
-                  onClick={() => setMenuOpen(false)}
-                  className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.currentTarget.blur();
+                    handleNavigate(id.id);
+                    setMenuOpen(false);
+                  }}
+                  className={`text-[16px] transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
               ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : "text-black"}
               `}
                 >
@@ -90,7 +102,7 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <Button className="w-full rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg">
+          <Button className="w-full rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-[16px] p-3 sm:p-4.5 mt-4">
             <img
               src={assets.social}
               alt="Social Media"
@@ -101,7 +113,7 @@ export function Header() {
         </div>
       )}
 
-      <Button className="p-3 sm:p-4.5 rounded-[35px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg hidden md:flex">
+      <Button className="p-3 sm:p-5 rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-[16px] hidden md:flex">
         <img
           src={assets.social}
           alt="Social Media"

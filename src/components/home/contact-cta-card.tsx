@@ -12,9 +12,9 @@ const contactBenefits = [
 
 export function ContactCtaCard() {
   return (
-    <div className="flex flex-col lg:flex-row h-auto lg:h-96 w-full max-w-257.5 p-5 rounded-xl sm:rounded-2xl bg-linear-to-b from-[#FF6400] to-[#CD5304] border border-red-500 mt-25 items-center justify-center mb-12 sm:mb-16 text-white overflow-hidden">
+    <div className="flex flex-col lg:flex-row h-auto lg:h-96  p-10 rounded-xl sm:rounded-2xl bg-linear-to-b from-[#FF6400] to-[#CD5304] border border-red-500 mt-40 items-center justify-center mb-12 sm:mb-16 text-white overflow-hidden">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6">
-        <div className="flex flex-col flex-1 w-full lg:w-119.5">
+        <div className="flex flex-col flex-1 w-full lg:w-149.5">
           <h2 className="poppins-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             Pronto para começar?
           </h2>
