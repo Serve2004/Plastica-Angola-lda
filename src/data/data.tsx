@@ -123,115 +123,42 @@ export const seeMoreProducts = [
     products: [
       {
         id: 1,
-        name: "Tigela",
-        label:
-          "Diversos tamanhos e cores, ideais para servir e armazenar alimentos.",
-        img: assets.tigela,
-      },
-      {
-        id: 2,
-        name: "Recipiente",
-        label: "Herméticos e empilháveis para conservação de alimentos.",
-        img: assets.recipiente,
-      },
-      {
-        id: 3,
-        name: "Copos",
-        label: "Copos reutilizáveis e descartáveis para festas e eventos.",
-        img: assets.copos,
-      },
-      {
-        id: 4,
-        name: "Baú Transparente",
-        label: "Prático e resistente para armazenar com seguraça.",
-        img: assets.bauTransparente,
-      },
-      {
-        id: 5,
-        name: "Cesto",
-        label: "Leve e resistente para organização e transporte.",
-        img: assets.cesto,
-      },
-      {
-        id: 6,
-        name: "Tigela",
-        label: "Ideal para preparar, servir e armazenar alimentos.",
-        img: assets.tigela1,
-      },
+        img: assets.productcoz,
+      }
     ],
   },
   {
     id: 2,
     slug: "embalagens",
     name: "Embalagens",
-    logo: <img src={assets.box} alt="box" className="w-15 h-15" />,
+    logo: <img src={assets.box} alt="box" className="w-10 h-10" />,
     label:
       "Embalagens plásticas para diferentes indústrias, com foco em segurança, durabilidade e personalização conforme a necessidade do cliente.",
     products: [
       {
         id: 1,
-        name: "Caixa alimentar",
-        label: "Certificadas para contacto com alimentos, em vários formatos.",
-        img: assets.caixaAlimentar,
+        img: assets.productemb,
       },
-      // {
-      //   id: 2,
-      //   name: "Saco plástico",
-      //   label: "Saco plástico para resíduos",
-      //   img: assets.saco,
-      // },
-      // {
-      //   id: 3,
-      //   name: "Filme stretch",
-      //   label: "Filme stretch para embalagem",
-      //   img: assets.filme,
-      // },
-      // {
-      //   id: 4,
-      //   name: "Embalagem personalizada",
-      //   label: "Embalagem personalizada conforme a necessidade do cliente",
-      //   img: assets.embalagemPersonalizada,
-      // },
     ],
   },
   {
     id: 3,
     slug: "brinquedos",
-    logo: <img src={assets.cubos} alt="box" className="w-15 h-15" />,
+    logo: <img src={assets.cubos} alt="box" className="w-10 h-10" />,
     name: "Brinquedos",
     label:
       "Brinquedos seguros, coloridos e divertidos, produzidos com materiais não tóxicos e testados para a diversão e aprendizagem das crianças.",
     products: [
       {
         id: 1,
-        name: "Brinquedos educativos",
-        label: "Estimulam o raciocínio e a coordenação motora",
-        img: assets.toy,
-      },
-      {
-        id: 2,
-        name: "Jogos de encaixe",
-        label: "Peças coloridas que incentivam a criatividade.",
-        img: assets.toy,
-      },
-      {
-        id: 3,
-        name: "Bonecos e figuras",
-        label: "Personagens variados em plástico resistente.",
-        img: assets.toy,
-      },
-      {
-        id: 4,
-        name: "Brinquedos de praia",
-        label: "Pás, baldes e formas para brincar ao ar livre.",
-        img: assets.toy,
+        img: assets.productbr,
       },
     ],
   },
   {
     id: 4,
     slug: "solucoes-industriais",
-    logo: <img src={assets.eco} alt="box" className="w-15 h-15" />,
+    logo: <img src={assets.eco} alt="box" className="w-10 h-10" />,
     name: "Soluções Industriais",
     label:
       "Produtos plásticos técnicos e de alta performance para o setor industrial, com resistência e precisão dimensional.",
@@ -241,71 +168,155 @@ export const seeMoreProducts = [
         name: "Tubos e conexões",
         label: "Para sistemas hidráulicos e industriais.",
         img: assets.tuboConexao,
-      },
-      {
-        id: 2,
-        name: "Paletes",
-        label: "Resistentes, leves e reutilizáveis para logística.",
-        img: assets.tubos,
-      },
-      {
-        id: 3,
-        name: "Contentores",
-        label: "Armazenamento e transporte em grande escala.",
-        img: assets.tubos,
-      },
-      {
-        id: 4,
-        name: "Peças técnicas",
-        label: "Componentes específicos para linhas de produção.",
-        img: assets.tubos,
-      },
+      }
     ],
   },
   {
     id: 5,
     slug: "produtos-domesticos",
-    logo: <img src={assets.chave} alt="box" className="w-15 h-15" />,
+    logo: <img src={assets.casa} alt="box" className="w-10 h-10" />,
     name: "Produtos Domésticos",
     label:
       "Artigos plásticos para o lar, práticos e duráveis, que facilitam a organização, limpeza e o dia a dia em casa.",
     products: [
       {
         id: 1,
-        name: "Baldes",
-        label: "Resistentes e em vários tamanhos para uso doméstico.",
-        img: assets.baldes,
+        img: assets.productDom1,
       },
       {
         id: 2,
-        name: "Bacias",
-        label: "Resistentes e em vários tamanhos para uso doméstico.",
-        img: assets.bacia,
+        img: assets.productDom2,
       },
       {
         id: 3,
-        name: "Caixa de arrumação",
-        label: "Empilháveis para organizar qualquer divisão da casa.",
-        img: assets.caixaArrumacao,
+        img: assets.productDom3,
       },
       {
         id: 4,
-        name: "Artigos de limpeza",
-        label: "Apanhadores, vassouras e acessórios práticos.",
-        img: assets.artigosLimpeza,
+        img: assets.productDom4,
       },
       {
         id: 5,
-        name: "Baldes de lixo",
-        label: "Resistentes e práticos, em vários tamanhos para casa e escritório.",
-        img: assets.baldesLixo,
+        img: assets.productDom5,
       },
       {
         id: 6,
-        name: "Cadeiras",
-        label: "Leves, resistentes e confortáveis para uso interior e exterior.",
-        img: assets.cadeiras,
+        img: assets.productDom6,
       },
+      {
+        id: 7,
+        img: assets.productDom7,
+      },
+      {
+        id: 8,
+        img: assets.productDom8,
+      },
+      {
+        id: 9,
+        img: assets.productDom9,
+      },
+      {
+        id: 10,
+        img: assets.productDom10,
+      },
+      {
+        id: 11,
+        img: assets.productDom11,
+      },
+      {
+        id: 12,
+        img: assets.productDom12,
+      },
+      {
+        id: 13,
+        img: assets.productDom13,
+      },
+      {
+        id: 14,
+        img: assets.productDom14,
+      },
+      {
+        id: 15,
+        img: assets.productDom15,
+      },
+      {
+        id: 16,
+        img: assets.productDom16,
+      },
+      {
+        id: 17,
+        img: assets.productDom17,
+      },
+      {
+        id: 18,
+        img: assets.productDom18,
+      },
+      {
+        id: 19,
+        img: assets.productDom19,
+      },
+      {
+        id: 20,
+        img: assets.productDom20,
+      },
+      {
+        id: 21,
+        img: assets.productDom21,
+      },
+      {
+        id: 22,
+        img: assets.productDom22,
+      },
+      {
+        id: 23,
+        img: assets.productDom23,
+      },
+      {
+        id: 24,
+
+        img: assets.productDom24,
+      },
+      {
+        id: 25,
+        img: assets.productDom25,
+      },
+      {
+        id: 26,
+        img: assets.productDom26,
+      },
+      {
+        id: 27,
+        img: assets.productDom27,
+      },
+      {
+        id: 28,
+        img: assets.productDom28,
+      },
+      {
+        id: 29,
+        img: assets.productDom29,
+      },
+      {
+        id: 30,
+        img: assets.productDom30,
+      },
+      {
+        id: 31,
+        img: assets.productDom31,
+      },
+      {
+        id: 32,
+        img: assets.productDom32,
+      },
+      {
+        id: 33,
+        img: assets.productDom33,
+      },
+      {
+        id: 34,
+        img: assets.productDom34,
+      },
+      
     ],
   },
 ];

@@ -118,7 +118,7 @@ export default function HeroCarousel({
         ).map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="w-full h-full bg-cover bg-center"
+              className="w-full h-full bg-cover bg-center z-0"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
           </SwiperSlide>
@@ -126,7 +126,7 @@ export default function HeroCarousel({
       </Swiper>
 
       {/* Botões */}
-      <div className="absolute bottom-4 right-1 md:right-10 flex gap-6 z-50">
+      <div className="absolute bottom-4 right-1 md:right-10 flex gap-6 z-25">
         <button
           onClick={handlePrev}
           className="rounded-full cursor-pointer text-white hover:text-[#FF6400] transition-colors duration-300"

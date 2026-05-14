@@ -1,4 +1,4 @@
-import chave from "./chave.svg";
+import casa from "./casa.svg";
 import cubos from "./cubos-baby-abc.svg";
 import eco from "./eco-factory.svg";
 import medal from "./medal.svg";
@@ -51,9 +51,47 @@ import caixaArrumacao from "./caixa-arrumacao.svg";
 import artigosLimpeza from "./artigos-limpeza.svg";
 import baldesLixo from "./baldes-lixo.svg";
 import cadeiras from "./cadeiras.svg";
+import productbr from "./productbr.svg";
+import productemb from "./productemb.svg";
+import productcoz from "./productcoz.svg";
+import productDom1 from "./productDomestico/productDom1.svg";
+import productDom2 from "./productDomestico/productDom2.svg";
+import productDom3 from "./productDomestico/productDom3.svg";
+import productDom4 from "./productDomestico/productDom4.svg";
+import productDom5 from "./productDomestico/productDom5.svg";
+import productDom6 from "./productDomestico/productDom6.svg";
+import productDom7 from "./productDomestico/productDom7.svg";
+import productDom8 from "./productDomestico/productDom8.svg";
+import productDom9 from "./productDomestico/productDom9.svg";
+import productDom10 from "./productDomestico/productDom10.svg";
+import productDom11 from "./productDomestico/productDom11.svg";
+import productDom12 from "./productDomestico/productDom12.svg";
+import productDom13 from "./productDomestico/productDom13.svg";
+import productDom14 from "./productDomestico/productDom14.svg";
+import productDom15 from "./productDomestico/productDom15.svg";
+import productDom16 from "./productDomestico/productDom16.svg";
+import productDom17 from "./productDomestico/productDom17.svg";
+import productDom18 from "./productDomestico/productDom18.svg";
+import productDom19 from "./productDomestico/productDom19.svg";
+import productDom20 from "./productDomestico/productDom20.svg";
+import productDom21 from "./productDomestico/productDom21.svg";
+import productDom22 from "./productDomestico/productDom22.svg";
+import productDom23 from "./productDomestico/productDom23.svg";
+import productDom24 from "./productDomestico/productDom24.svg";
+import productDom25 from "./productDomestico/productDom25.svg";
+import productDom26 from "./productDomestico/productDom26.svg";
+import productDom27 from "./productDomestico/productDom27.svg";
+import productDom28 from "./productDomestico/productDom28.svg";
+import productDom29 from "./productDomestico/productDom29.svg";
+import productDom30 from "./productDomestico/productDom30.svg";
+import productDom31 from "./productDomestico/productDom31.svg";
+import productDom32 from "./productDomestico/productDom32.svg";
+import productDom33 from "./productDomestico/productDom33.svg";
+import productDom34 from "./productDomestico/productDom34.svg";
+
 
 export const assets = {
-  chave,
+  casa,
   cubos,
   eco,
   medal,
@@ -106,4 +144,41 @@ export const assets = {
   artigosLimpeza,
   baldesLixo,
   cadeiras,
+  productbr,
+  productemb,
+  productcoz,
+  productDom1,
+  productDom2,
+  productDom3,
+  productDom4,
+  productDom5,
+  productDom6,
+  productDom7,
+  productDom8,
+  productDom9,
+  productDom10,
+  productDom11,
+  productDom12,
+  productDom13,
+  productDom14,
+  productDom15,
+  productDom16,
+  productDom17,
+  productDom18,
+  productDom19,
+  productDom20,
+  productDom21,
+  productDom22,
+  productDom23,
+  productDom24,
+  productDom25,
+  productDom26,
+  productDom27,
+  productDom28,
+  productDom29,
+  productDom30,
+  productDom31,
+  productDom32,
+  productDom33,
+  productDom34
 };

@@ -1,5 +1,7 @@
-import { SeeProductsButton, TalkToUsButton } from "@/components/buttons";
+import { SeeProductsButton } from "@/components/buttons";
 import HeroCarousel from "@/components/carrosel";
+import { SolicitarOrcamentoDialog } from "../solicitarOrcamentoDialog";
+
 
 export function HeroSection() {
   return (
@@ -21,7 +23,7 @@ export function HeroSection() {
             </span>
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 md:gap-6 mt-3 sm:mt-5">
-            <TalkToUsButton />
+            <SolicitarOrcamentoDialog/>
             <SeeProductsButton />
           </div>
         </div>

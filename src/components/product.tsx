@@ -15,7 +15,7 @@ export function Product({ id, name, image, slug, products }: ProductProps) {
           shadow-[0_10px_30px_rgba(0,0,0,0.1)] 
           hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] 
           hover:-translate-y-3 
-          transition-all duration-300 mt-10 h-80 w-65.5  overflow-hidden border border-[#C3BBBBE5] cursor-pointer "
+          transition-all duration-300 mt-10 h-80 w-60.5  overflow-hidden border border-[#C3BBBBE5] cursor-pointer "
       key={id}
     >
       <div className=" rounded-t-[8px] h-46.5 w-full overflow-hidden">
