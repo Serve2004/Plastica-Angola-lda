@@ -5,7 +5,7 @@ import { ContactInfo } from "@/components/contactInfo";
 export function ContactSection() {
   return (
     <section
-      className="px-2 sm:px-4 md:px-8 xl:px-10 pt-8 sm:pt-12 md:pt-20 flex flex-col items-center justify-center mt-6 sm:mt-10"
+      className="px-2 sm:px-4 md:px-8 xl:px-10 pt-8 sm:pt-9 md:pt-40 flex flex-col items-center justify-center "
       id="contact"
     >
       <div className="flex flex-col items-center justify-center w-full">

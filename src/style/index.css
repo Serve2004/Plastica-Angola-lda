@@ -2,14 +2,12 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/jetbrains-mono";
-
-
-
+@import "@fontsource-variable/geist";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-mono);
+  --font-heading: var(--font-sans);
   --font-mono: "Poppins", sans-serif;
   --font-weight: 400;
   --font-style: normal;
@@ -51,6 +49,7 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --font-sans: 'Geist Variable', sans-serif;
 }
 
 :root {
@@ -90,27 +89,27 @@
 
 .dark {
   --background: oklch(0.145 0 0);
-  --foreground: oklch(0.28 0.01 260);
+  --foreground: oklch(0.985 0 0);
   /* #343434 */
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.63 0.19 251);
+  --primary: oklch(0.922 0 0);
   /* #0088EB */
-  --primary-foreground: oklch(0.98 0.01 250);
+  --primary-foreground: oklch(0.205 0 0);
   /* branco suave p/ contraste */
-  --secondary: oklch(0.70 0.14 164);
+  --secondary: oklch(0.269 0 0);
   /* #1BC69A */
-  --secondary-foreground: oklch(0.20 0.02 160);
+  --secondary-foreground: oklch(0.985 0 0);
   /* texto escuro */
-  --muted: oklch(0.95 0.03 165);
+  --muted: oklch(0.269 0 0);
   /* #E6F9F3 */
-  --muted-foreground: oklch(0.45 0.02 165);
+  --muted-foreground: oklch(0.708 0 0);
   /* texto suave */
-  --accent: oklch(0.70 0.20 40);
+  --accent: oklch(0.269 0 0);
   /* #FF6400 */
-  --accent-foreground: oklch(0.98 0.01 40);
+  --accent-foreground: oklch(0.985 0 0);
   /* branco */
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -130,7 +129,6 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
 
 .poppins-regular {
   font-family: "Poppins", sans-serif;
@@ -264,7 +262,7 @@
   }
 
   html {
-    @apply font-mono;
+    @apply font-sans;
   }
 }
 

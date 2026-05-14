@@ -1,13 +1,15 @@
 import { assets } from "@/assets";
 import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
-import { links } from "@/data/data";
+import { links } from "@/data/navigation-links";
 import { ListIcon, XIcon } from "@phosphor-icons/react";
+import { useScroll } from "../navigateHook";
+import { ContactDialog } from "../contactDialog";
 
 export function Header() {
   const [active, setActive] = useState("home");
   const [bgWhite, setBgWhite] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const handleNavigate = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +33,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 px-2 sm:px-4 md:px-8 xl:px-10 py-8 sm:py-10 md:py-2.25 flex items-center justify-between z-100 overflow-hidden h-14 sm:h-16 transition-all duration-300  ${bgWhite ? "bg-white" : "bg-transparent"} ${menuOpen && "bg-white"}`}
+      className={`fixed top-0 left-0 right-0 px-2 sm:px-4 md:px-8 xl:px-10 py-8 sm:py-10 md:py-2.25 flex items-center justify-between z-30 overflow-hidden h-14 sm:h-16 transition-all duration-300  ${bgWhite ? "bg-white" : "bg-transparent"} ${menuOpen && "bg-white"}`}
     >
       <h1 className="flex items-center justify-center w-20 sm:w-25 md:w-35">
         <img src={assets.logo} alt="Logo" />
@@ -44,8 +46,13 @@ export function Header() {
           {links.map((id) => (
             <li key={id.id}>
               <a
-                href={`#${id.id}`}
-                className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.currentTarget.blur();
+                  handleNavigate(id.id);
+                }}
+                className={`text-[16px] transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
               ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : bgWhite ? "text-black" : "text-white"}
               
               `}
@@ -79,9 +86,14 @@ export function Header() {
             {links.map((id) => (
               <li key={id.id}>
                 <a
-                  href={`#${id.id}`}
-                  onClick={() => setMenuOpen(false)}
-                  className={`text-sm transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.currentTarget.blur();
+                    handleNavigate(id.id);
+                    setMenuOpen(false);
+                  }}
+                  className={`text-[16px] transition-all duration-1000 focus:text-[#FF6400] focus:font-bold hover:text-[#FF6400]
               ${active === id.id ? "focus:text-[#FF6400] text-[#FF6400] font-bold" : "text-black"}
               `}
                 >
@@ -90,25 +102,11 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <Button className="w-full rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg">
-            <img
-              src={assets.social}
-              alt="Social Media"
-              className="w-5 sm:w-7.5 h-5 sm:h-7.5"
-            />{" "}
-            Fale conosco
-          </Button>
+          <ContactDialog className="max-w-full rounded-none py-5"/>
         </div>
       )}
 
-      <Button className="p-3 sm:p-4.5 rounded-[35px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-lg hidden md:flex">
-        <img
-          src={assets.social}
-          alt="Social Media"
-          className="w-5 sm:w-7.5 h-5 sm:h-7.5"
-        />{" "}
-        Fale conosco
-      </Button>
+      <ContactDialog className="hidden md:flex" />
     </header>
   );
 }

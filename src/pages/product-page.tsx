@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { seeMoreProducts } from "../data/data";
 import { ArrowLeftIcon } from "@phosphor-icons/react";
 import { TalkToUsButton } from "@/components/buttons";
+import { ClickableImage, ImageLightbox } from "@/components/imageLightbox";
 
 export function ProductPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
+
+  // ── Lightbox state ──────────────────────────────────────────────────────────
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const product = seeMoreProducts.find((item) => item.slug === slug);
 
@@ -13,10 +18,38 @@ export function ProductPage() {
     return <h1>Produto não encontrado</h1>;
   }
 
+  // Recolhe apenas os itens que têm imagem simples (sem label — formato industrial)
+  const simpleImages = product.products.filter(
+    (item) => !("label" in item) || !item.label,
+  );
+
+  function openLightbox(index: number) {
+    setLightboxIndex(index);
+  }
+
+  function closeLightbox() {
+    setLightboxIndex(null);
+  }
+
+  function prevImage() {
+    setLightboxIndex((i) =>
+      i !== null ? (i - 1 + simpleImages.length) % simpleImages.length : null,
+    );
+  }
+
+  function nextImage() {
+    setLightboxIndex((i) =>
+      i !== null ? (i + 1) % simpleImages.length : null,
+    );
+  }
+
+  const activeLightboxItem =
+    lightboxIndex !== null ? simpleImages[lightboxIndex] : null;
+
   return (
     <div className="min-h-screen bg-white text-[#343434]">
-      {/* HERO */}
-      <section className="bg-[#FFE8D9] px-6 md:px-10 py-10 md:py-14 pt-20 lg:pt-25 ">
+      {/* ── HERO ───────────────────────────────────────────────────────── */}
+      <section className="bg-[#FFE8D9] px-6 md:px-10 py-10 md:py-14 pt-20 lg:pt-25">
         <div className="max-w-6xl mx-auto">
           <button
             onClick={() => navigate(-1)}
@@ -26,17 +59,13 @@ export function ProductPage() {
           </button>
 
           <div className="flex items-start gap-3">
-            <div className="w-16 h-16 rounded-2xl bg-white shadow-sm border border-[#E4D5CA] flex items-center justify-center">
-              <div className="w-22.5 h-22.5 p-5 rounded-full flex items-center justify-center text-[#FF6400] text-lg">
-                {product.logo}
-              </div>
+            <div className="w-16 h-16 rounded-2xl bg-white shadow-sm border border-[#E4D5CA] flex items-center justify-center text-[#FF6400]">
+              {product.logo}
             </div>
-
             <div>
               <h1 className="text-3xl md:text-5xl poppins-bold leading-tight">
                 {product.name}
               </h1>
-
               <p className="text-[#7A7A7A] montserrat text-sm md:text-base max-w-3xl leading-relaxed">
                 {product.label}
               </p>
@@ -44,57 +73,86 @@ export function ProductPage() {
           </div>
         </div>
       </section>
-      {/* PRODUCTS */}
+
+      {/* ── PRODUCTS ───────────────────────────────────────────────────── */}
       <section className="px-6 md:px-10 py-10 md:py-14">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl poppins-semibold mb-8">
             Galeria de produtos
           </h2>
 
-          <div className="flex flex-wrap justify-start items-center  gap-5">
+          <div className="flex flex-wrap justify-start items-center gap-5">
             {product.products.map((item) => (
-              <div
-                key={item.id}
-                className="w-92.5 h-80.75 rounded-xl overflow-hidden border border-[#C3BBBB] bg-[#FFF0E6] hover:-translate-y-3 hover:shadow-lg transition-all duration-300 cursor-pointer"
-              >
-                <div className="h-56 bg-white flex items-center justify-center overflow-hidden">
-                  <img
+              <div key={item.id}>
+                {"name" in item && "label" in item && item.label ? (
+                  // ── Card com nome + descrição ─────────────────────────
+                  <div className="w-92.5 h-80.75 rounded-xl overflow-hidden border border-[#C3BBBB] bg-[#FFF0E6] hover:-translate-y-3 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                    <div className="h-56 bg-white flex items-center justify-center overflow-hidden">
+                      <img
+                        src={item.img}
+                        alt={item.name}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="poppins-semibold text-sm md:text-base">
+                        {item.name}
+                      </h3>
+                      <p className="inter text-xs md:text-sm text-[#777777] mt-1 leading-relaxed">
+                        {item.label}
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  // ── Imagem simples clicável → lightbox ────────────────
+                  <ClickableImage
                     src={item.img}
-                    alt={item.name}
-                    className="w-full h-full object-cover object-center"
+                    alt={"name" in item ? item.name : "produto"}
+                    className="w-92.5 object-center"
+                    onOpen={() => {
+                      const simpleIndex = simpleImages.findIndex(
+                        (s) => s.id === item.id,
+                      );
+                      openLightbox(simpleIndex);
+                    }}
                   />
-                </div>
-
-                <div className="p-4">
-                  <h3 className="poppins-semibold text-sm md:text-base">
-                    {item.name}
-                  </h3>
-
-                  <p className="inter text-xs md:text-sm text-[#777777] mt-1 leading-relaxed">
-                    {item.label}
-                  </p>
-                </div>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ── CTA ────────────────────────────────────────────────────────── */}
       <section className="px-6 md:px-10 py-20 md:py-28">
         <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
           <h2 className="text-3xl md:text-5xl poppins-bold leading-tight">
             Interessado nesta categoria?
           </h2>
-
           <p className="text-[#777777] montserrat-medium text-sm md:text-lg mt-4 max-w-xl leading-relaxed">
             Fale connosco e solicite um orçamento personalizado para as suas
             necessidades.
           </p>
-
           <TalkToUsButton type="secondary" />
         </div>
       </section>
+
+      {/* ── LIGHTBOX ───────────────────────────────────────────────────── */}
+      {activeLightboxItem && (
+        <ImageLightbox
+          src={activeLightboxItem.img}
+          alt={
+            "name" in activeLightboxItem
+              ? (activeLightboxItem.name as string)
+              : "produto"
+          }
+          currentIndex={lightboxIndex ?? 0}
+          total={simpleImages.length}
+          onClose={closeLightbox}
+          onPrev={prevImage}
+          onNext={nextImage}
+        />
+      )}
     </div>
   );
 }
