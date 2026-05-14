@@ -126,7 +126,7 @@ export default function HeroCarousel({
       </Swiper>
 
       {/* Botões */}
-      <div className="absolute bottom-4 right-1 md:right-10 flex gap-6 z-25">
+      <div className="absolute bottom-4 right-1 md:right-10 flex gap-6 z-20">
         <button
           onClick={handlePrev}
           className="rounded-full cursor-pointer text-white hover:text-[#FF6400] transition-colors duration-300"
@@ -145,7 +145,7 @@ export default function HeroCarousel({
       </div>
 
       {/* Conteúdo por cima */}
-      <div className="absolute inset-0 z-20 sombra">{children}</div>
+      <div className="absolute inset-0 z-10 sombra">{children}</div>
     </div>
   );
 }

@@ -33,7 +33,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 px-2 sm:px-4 md:px-8 xl:px-10 py-8 sm:py-10 md:py-2.25 flex items-center justify-between z-25 overflow-hidden h-14 sm:h-16 transition-all duration-300  ${bgWhite ? "bg-white" : "bg-transparent"} ${menuOpen && "bg-white"}`}
+      className={`fixed top-0 left-0 right-0 px-2 sm:px-4 md:px-8 xl:px-10 py-8 sm:py-10 md:py-2.25 flex items-center justify-between z-30 overflow-hidden h-14 sm:h-16 transition-all duration-300  ${bgWhite ? "bg-white" : "bg-transparent"} ${menuOpen && "bg-white"}`}
     >
       <h1 className="flex items-center justify-center w-20 sm:w-25 md:w-35">
         <img src={assets.logo} alt="Logo" />

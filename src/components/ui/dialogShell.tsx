@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 
 export function DialogShell({
@@ -15,7 +16,7 @@ export function DialogShell({
 }) {
   const progress = ((step - 1) / (totalSteps - 1)) * 100;
 
-  return (
+  return createPortal(
     <>
       {/* Backdrop */}
       <div
@@ -63,6 +64,7 @@ export function DialogShell({
           <div className="px-6 pt-5 pb-6">{children}</div>
         </div>
       </div>
-    </>
+    </>,
+    document.body,
   );
 }
