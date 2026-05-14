@@ -1,9 +1,9 @@
 import { assets } from "@/assets";
 import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
 import { links } from "@/data/navigation-links";
 import { ListIcon, XIcon } from "@phosphor-icons/react";
-import { useScroll } from "./navigateHook";
+import { useScroll } from "../navigateHook";
+import { ContactDialog } from "../contactDialog";
 
 export function Header() {
   const [active, setActive] = useState("home");
@@ -102,25 +102,11 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <Button className="w-full rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-[16px] p-3 sm:p-4.5 mt-4">
-            <img
-              src={assets.social}
-              alt="Social Media"
-              className="w-5 sm:w-7.5 h-5 sm:h-7.5"
-            />{" "}
-            Fale conosco
-          </Button>
+          <ContactDialog className="max-w-full rounded-none py-5"/>
         </div>
       )}
 
-      <Button className="p-3 sm:p-5 rounded-[8px] bg-[#FF6400] hover:bg-[#CD5304] text-sm sm:text-[16px] hidden md:flex">
-        <img
-          src={assets.social}
-          alt="Social Media"
-          className="w-5 sm:w-7.5 h-5 sm:h-7.5"
-        />{" "}
-        Fale conosco
-      </Button>
+      <ContactDialog className="hidden md:flex" />
     </header>
   );
 }

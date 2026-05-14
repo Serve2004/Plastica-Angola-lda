@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { seeMoreProducts } from "../data/data";
 import { ArrowLeftIcon } from "@phosphor-icons/react";
 import { TalkToUsButton } from "@/components/buttons";
-import { ClickableImage, ImageLightbox } from "@/components/ImageLightbox";
+import { ClickableImage, ImageLightbox } from "@/components/imageLightbox";
 
 export function ProductPage() {
   const { slug } = useParams();

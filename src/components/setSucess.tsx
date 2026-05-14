@@ -1,7 +1,13 @@
 import { CheckCircleIcon } from "@phosphor-icons/react";
 import { X } from "lucide-react";
 
-export function StepSuccess({ onClose }: { onClose: () => void }) {
+export function StepSuccess({
+  onClose,
+  type = "default",
+}: {
+  onClose: () => void;
+  type?: "default" | "primary";
+}) {
   return (
     <>
       {/* Backdrop */}
@@ -26,16 +32,30 @@ export function StepSuccess({ onClose }: { onClose: () => void }) {
               <CheckCircleIcon
                 size={40}
                 weight="fill"
-                className="text-green-500 sm:w-12 md:w-[50px]"
+                className="text-green-500 sm:w-12 md:w-12.5"
               />
             </div>
-            <h2 className="text-lg sm:text-xl md:text-[24px] font-bold text-zinc-900 mb-2">
-              Recebemos o seu projeto!
-            </h2>
-            <p className="text-sm sm:text-base md:text-[17px] montserrat text-zinc-400 leading-relaxed max-w-xs sm:max-w-sm md:max-w-md">
-              O nosso departamento de engenharia vai analisar e entraremos em
-              contacto o mais breve possível.
-            </p>
+            {type === "primary" ? (
+              <>
+                <h2 className="text-lg sm:text-xl md:text-[24px] font-bold text-zinc-900 mb-2">
+                  Projeto submetido com sucesso!
+                </h2>
+                <p className="text-sm sm:text-base md:text-[17px] montserrat text-zinc-400 leading-relaxed max-w-xs sm:max-w-sm md:max-w-md">
+                  O nosso departamento de engenharia vai analisar e entraremos
+                  em contacto o mais breve possível.
+                </p>
+              </>
+            ) : (
+              <>
+                <h2 className="text-lg sm:text-xl md:text-[24px] font-bold text-zinc-900 mb-2">
+                  Recebemos o seu projeto!
+                </h2>
+                <p className="text-sm sm:text-base md:text-[17px] montserrat text-zinc-400 leading-relaxed max-w-xs sm:max-w-sm md:max-w-md">
+                  O nosso departamento de engenharia vai analisar e entraremos
+                  em contacto o mais breve possível.
+                </p>
+              </>
+            )}
             <button
               type="button"
               onClick={onClose}
