@@ -81,42 +81,20 @@ export function ProductPage() {
             Galeria de produtos
           </h2>
 
-          <div className="flex flex-wrap justify-start items-center gap-5">
+          <div className="flex flex-wrap justify-center md:justify-start items-center gap-5">
             {product.products.map((item) => (
               <div key={item.id}>
-                {"name" in item && "label" in item && item.label ? (
-                  // ── Card com nome + descrição ─────────────────────────
-                  <div className="w-92.5 h-80.75 rounded-xl overflow-hidden border border-[#C3BBBB] bg-[#FFF0E6] hover:-translate-y-3 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                    <div className="h-56 bg-white flex items-center justify-center overflow-hidden">
-                      <img
-                        src={item.img}
-                        alt={item.name}
-                        className="w-full h-full object-cover object-center"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="poppins-semibold text-sm md:text-base">
-                        {item.name}
-                      </h3>
-                      <p className="inter text-xs md:text-sm text-[#777777] mt-1 leading-relaxed">
-                        {item.label}
-                      </p>
-                    </div>
-                  </div>
-                ) : (
-                  // ── Imagem simples clicável → lightbox ────────────────
-                  <ClickableImage
-                    src={item.img}
-                    alt={"name" in item ? item.name : "produto"}
-                    className="w-92.5 object-center"
-                    onOpen={() => {
-                      const simpleIndex = simpleImages.findIndex(
-                        (s) => s.id === item.id,
-                      );
-                      openLightbox(simpleIndex);
-                    }}
-                  />
-                )}
+                <ClickableImage
+                  src={item.img}
+                  alt={"name" in item ? item.img : "produto"}
+                  className="w-92.5 object-center"
+                  onOpen={() => {
+                    const simpleIndex = simpleImages.findIndex(
+                      (s) => s.id === item.id,
+                    );
+                    openLightbox(simpleIndex);
+                  }}
+                />
               </div>
             ))}
           </div>

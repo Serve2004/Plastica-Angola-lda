@@ -25,14 +25,14 @@ export function DialogShell({
       />
 
       {/* Panel */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-6">
         <div
-          className="relative rounded-2xl shadow-2xl w-full max-w-[95vw] sm:max-w-[90vw] md:max-w-190 overflow-hidden bg-[#EFEFEF]"
+          className="relative rounded-none sm:rounded-2xl shadow-2xl w-full h-full sm:h-auto sm:max-w-[90vw] md:max-w-190 overflow-hidden bg-[#EFEFEF]"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Top bar */}
           <div className="flex flex-col">
-            <div className="flex justify-end px-6 pt-5">
+            <div className="flex justify-end px-6 sm:pt-5 ">
               <button
                 type="button"
                 onClick={onClose}

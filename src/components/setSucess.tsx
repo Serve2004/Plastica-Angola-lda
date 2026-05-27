@@ -1,5 +1,6 @@
 import { CheckCircleIcon } from "@phosphor-icons/react";
 import { X } from "lucide-react";
+import { createPortal } from "react-dom";
 
 export function StepSuccess({
   onClose,
@@ -8,7 +9,7 @@ export function StepSuccess({
   onClose: () => void;
   type?: "default" | "primary";
 }) {
-  return (
+  return createPortal(
     <>
       {/* Backdrop */}
       <div
@@ -66,6 +67,6 @@ export function StepSuccess({
           </div>
         </div>
       </div>
-    </>
+    </>,document.body
   );
 }

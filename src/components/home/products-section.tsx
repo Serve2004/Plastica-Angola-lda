@@ -19,10 +19,8 @@ export function ProductsSection() {
           {products.map((item) => (
             <Product
               id={item.id}
-              name={item.name}
-              image={item.image}
+              banner={item.banner}
               slug={item.slug}
-              products={item.products}
               key={item.id}
             />
           ))}

@@ -88,6 +88,9 @@ import productDom31 from "./productDomestico/productDom31.svg";
 import productDom32 from "./productDomestico/productDom32.svg";
 import productDom33 from "./productDomestico/productDom33.svg";
 import productDom34 from "./productDomestico/productDom34.svg";
+import productDom35 from "./productDomestico/productDom35.svg";
+import productDom36 from "./productDomestico/productDom36.svg";
+import enxoval from "./enxoval.svg";
 
 
 export const assets = {
@@ -180,5 +183,8 @@ export const assets = {
   productDom31,
   productDom32,
   productDom33,
-  productDom34
+  productDom34,
+  productDom35,
+  productDom36,
+  enxoval,
 };

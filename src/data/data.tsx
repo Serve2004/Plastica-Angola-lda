@@ -63,52 +63,38 @@ export const products = [
   {
     id: 1,
     slug: "utensilios-de-cozinha",
+    banner: assets.productDom35,
     name: "Utensílios de cozinha",
-    image: assets.utencilios,
-    products: ["Tigelas", "Tabuleiros", "Escorredores", "Recipientes"],
   },
   {
     id: 2,
-    slug: "embalagens",
-    name: "Embalagens",
-    image: assets.embalagem,
-    products: [
-      "Caixas alimentares",
-      "Sacos plásticos",
-      "Filmes stretch",
-      "Embalagens personalizadas",
-    ],
+    slug: "enxoval",
+    banner: assets.productDom4,
+    name: "Enxoval",
   },
   {
     id: 3,
-    slug: "brinquedos",
-    name: "Brinquedos",
-    image: assets.toy,
-    products: [
-      "Brinquedos educativos",
-      "Jogos de encaixe",
-      "Bonecos e figuras",
-      "Brinquedos de praia",
-    ],
+    slug: "embalagens",
+    banner: assets.productemb,
+    name: "Embalagens",
   },
   {
     id: 4,
-    slug: "solucoes-industriais",
-    name: "Soluções Industriais",
-    image: assets.tubos,
-    products: ["Tubos e conexões", "Paletes", "Contentores", "Peças Técnicas"],
+    slug: "brinquedos",
+    banner: assets.productbr,
+    name: "Brinquedos",
   },
   {
     id: 5,
+    slug: "solucoes-industriais",
+    banner: assets.productDom26,
+    name: "Soluções Industriais",
+  },
+  {
+    id: 6,
     slug: "produtos-domesticos",
+    banner: assets.productDom34,
     name: "Produtos Domésticos",
-    image: assets.material,
-    products: [
-      "Baldes e bacias",
-      "Cadeiras",
-      "Baldes de lixo",
-      "Artigos de limpeza",
-    ],
   },
 ];
 
@@ -124,7 +110,15 @@ export const seeMoreProducts = [
       {
         id: 1,
         img: assets.productcoz,
-      }
+      },
+      {
+        id: 2,
+        img: assets.productDom35,
+      },
+      {
+        id: 3,
+        img: assets.productDom36,
+      },
     ],
   },
   {
@@ -165,10 +159,20 @@ export const seeMoreProducts = [
     products: [
       {
         id: 1,
-        name: "Tubos e conexões",
-        label: "Para sistemas hidráulicos e industriais.",
-        img: assets.tuboConexao,
-      }
+        img: assets.productDom26,
+      },
+      {
+        id: 2,
+        img: assets.productDom27,
+      },
+      {
+        id: 3,
+        img: assets.productDom28,
+      },
+      {
+        id: 4,
+        img: assets.productDom29,
+      },
     ],
   },
   {
@@ -193,130 +197,135 @@ export const seeMoreProducts = [
       },
       {
         id: 4,
-        img: assets.productDom4,
-      },
-      {
-        id: 5,
-        img: assets.productDom5,
-      },
-      {
-        id: 6,
-        img: assets.productDom6,
-      },
-      {
-        id: 7,
         img: assets.productDom7,
       },
       {
-        id: 8,
+        id: 5,
         img: assets.productDom8,
       },
       {
-        id: 9,
+        id: 6,
         img: assets.productDom9,
       },
       {
-        id: 10,
+        id: 7,
         img: assets.productDom10,
       },
       {
-        id: 11,
+        id: 8,
         img: assets.productDom11,
       },
       {
-        id: 12,
+        id: 9,
         img: assets.productDom12,
       },
       {
-        id: 13,
+        id: 10,
         img: assets.productDom13,
       },
       {
-        id: 14,
+        id: 11,
         img: assets.productDom14,
       },
       {
-        id: 15,
+        id: 12,
         img: assets.productDom15,
       },
       {
-        id: 16,
+        id: 13,
         img: assets.productDom16,
       },
       {
-        id: 17,
+        id: 14,
         img: assets.productDom17,
       },
       {
-        id: 18,
+        id: 15,
         img: assets.productDom18,
       },
       {
-        id: 19,
+        id: 16,
         img: assets.productDom19,
       },
       {
-        id: 20,
+        id: 17,
         img: assets.productDom20,
       },
       {
-        id: 21,
+        id: 18,
         img: assets.productDom21,
       },
       {
-        id: 22,
+        id: 19,
         img: assets.productDom22,
       },
       {
-        id: 23,
+        id: 20,
         img: assets.productDom23,
       },
       {
-        id: 24,
+        id: 21,
 
         img: assets.productDom24,
       },
       {
-        id: 25,
+        id: 22,
         img: assets.productDom25,
       },
       {
-        id: 26,
+        id: 23,
         img: assets.productDom26,
       },
       {
-        id: 27,
+        id: 24,
         img: assets.productDom27,
       },
       {
-        id: 28,
+        id: 25,
         img: assets.productDom28,
       },
       {
-        id: 29,
+        id: 26,
         img: assets.productDom29,
       },
       {
-        id: 30,
-        img: assets.productDom30,
-      },
-      {
-        id: 31,
+        id: 27,
         img: assets.productDom31,
       },
       {
-        id: 32,
+        id: 28,
         img: assets.productDom32,
       },
       {
-        id: 33,
+        id: 29,
         img: assets.productDom33,
       },
       {
-        id: 34,
+        id: 30,
         img: assets.productDom34,
       },
-      
+    ],
+  },
+  {
+    id: 5,
+    slug: "enxoval",
+    logo: <img src={assets.enxoval} alt="box" className="w-10 h-10" />,
+    name: "Enxoval",
+    label:
+      "Produtos plásticos seguros e práticos para o conforto e bem-estar do seu bebé, com materiais atóxicos e design pensado para os pequenos.",
+    products: [
+      {
+        id: 1,
+        img: assets.productDom5,
+      },
+      {
+        id: 2,
+        img: assets.productDom6,
+      },
+      {
+        id: 3,
+        img: assets.productDom30,
+      },
     ],
   },
 ];
