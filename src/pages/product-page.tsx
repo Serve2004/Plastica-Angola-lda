@@ -58,15 +58,15 @@ export function ProductPage() {
             <ArrowLeftIcon size={32} /> Voltar para os produtos
           </button>
 
-          <div className="flex items-start gap-3">
-            <div className="w-16 h-16 rounded-2xl bg-white shadow-sm border border-[#E4D5CA] flex items-center justify-center text-[#FF6400]">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+            <div className="shrink-0 w-16 h-16 rounded-2xl bg-white shadow-sm border border-[#E4D5CA] flex items-center justify-center text-[#FF6400] sm:mb-10">
               {product.logo}
             </div>
-            <div>
+            <div className="w-full md:flex-1">
               <h1 className="text-3xl md:text-5xl poppins-bold leading-tight">
                 {product.name}
               </h1>
-              <p className="text-[#7A7A7A] montserrat text-sm md:text-base max-w-3xl leading-relaxed">
+              <p className="text-[#7A7A7A] montserrat text-sm md:text-base max-w-full md:max-w-3xl leading-relaxed mt-3 md:mt-2">
                 {product.label}
               </p>
             </div>
