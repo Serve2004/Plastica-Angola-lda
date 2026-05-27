@@ -24,8 +24,9 @@ export function StepCategory({
         Selecione a categoria que melhor descreve o seu projeto.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4">
-        {CATEGORIES.map((cat) => (
+      <div className="overflow-y-auto max-h-[calc(100vh-300px)]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4">
+          {CATEGORIES.map((cat) => (
           <button
             key={cat.id}
             type="button"
@@ -52,6 +53,7 @@ export function StepCategory({
             </div>
           </button>
         ))}
+        </div>
       </div>
     </DialogShell>
   );
