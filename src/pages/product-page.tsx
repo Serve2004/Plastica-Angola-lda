@@ -68,7 +68,7 @@ export function ProductPage() {
               </h1>
               <p className="text-[#7A7A7A] montserrat text-sm md:text-base max-w-full md:max-w-3xl leading-relaxed mt-3 md:mt-2">
                 {product.label}
-              </p>
+              </p> 
             </div>
           </div>
         </div>

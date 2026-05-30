@@ -106,7 +106,14 @@ export function Header() {
         </div>
       )}
 
-      <ContactDialog className="hidden md:flex" />
+      <ContactDialog className="hidden md:flex">
+        <img
+                    src={assets.social}
+                    alt="Social Media"
+                    className="w-5 sm:w-7.5 h-5 sm:h-7.5"
+                  />{" "}
+                  Fale conosco
+      </ContactDialog>
     </header>
   );
 }
